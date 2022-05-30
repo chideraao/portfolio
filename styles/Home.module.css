@@ -13,6 +13,10 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+.nav .svgContainer {
+  cursor: pointer;
+}
+
 .navMain {
   justify-self: flex-end;
   display: flex;
@@ -41,8 +45,9 @@
 .navbar a:hover {
   color: #187eea;
 }
+
 .main {
-  height: 80vh;
+  height: 78vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;

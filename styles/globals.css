@@ -30,13 +30,13 @@ a {
   text-decoration: none;
 }
 
-a li {
+li a {
   position: relative;
   display: block;
   padding: 5px 0;
 }
 
-a li:after {
+li a:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -49,7 +49,11 @@ a li:after {
   transition: transform 0.3s;
 }
 
-a li:hover:after {
+li a:hover {
+  color: #187eea;
+}
+
+li a:hover:after {
   transform-origin: bottom left;
   transform: scaleX(1);
 }

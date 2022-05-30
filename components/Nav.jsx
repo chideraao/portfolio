@@ -9,45 +9,40 @@ function Nav() {
       <nav className={navStyles.nav}>
         <div className={navStyles.container}>
           <Link href="/">
-            <span>
-              <Image
-                src="/logo.svg"
-                alt="Dera's Logo"
-                width={100}
-                height={25}
-              />
+            <span className={navStyles.svgContainer}>
+              <Image src="/logo.svg" alt="Dera's Logo" width={67} height={35} />
             </span>
           </Link>
           <div className={navStyles.navLinks}>
             <ul className={navStyles.navMain}>
-              <a href="#about">
-                <li>
+              <li>
+                <a href="#about">
                   <span>01.</span> About
-                </li>
-              </a>
-              <a href="#projects">
-                <li>
+                </a>
+              </li>
+              <li>
+                <a href="#projects">
                   {" "}
                   <span>02.</span>Projects
-                </li>
-              </a>
-              <a href="#contacts">
-                <li>
+                </a>
+              </li>
+              <li>
+                <a href="#contacts">
                   {" "}
                   <span>03.</span> Contacts
-                </li>
-              </a>
+                </a>
+              </li>
+              <li>
+                <span className={navStyles.svgContainer}>
+                  <Image
+                    src="/night.svg"
+                    alt="night mode switch"
+                    width={21}
+                    height={21}
+                  />
+                </span>
+              </li>
             </ul>
-            <div className="night-mode">
-              <span>
-                <Image
-                  src="/night.svg"
-                  alt="night mode switch"
-                  width={21}
-                  height={21}
-                />
-              </span>
-            </div>
           </div>
         </div>
       </nav>
