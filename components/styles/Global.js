@@ -1,10 +1,12 @@
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyles = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 html,
 body {
   padding: 0;
   margin: 0;
-  height: 100vh;
 }
 
 * {
@@ -30,10 +32,27 @@ a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
 li a {
   position: relative;
   display: block;
   padding: 5px 0;
+  padding-bottom: 8px;
 }
 
 li a:after {
@@ -56,19 +75,9 @@ li a:hover {
 li a:hover:after {
   transform-origin: bottom left;
   transform: scaleX(1);
+  
 }
 
-ul {
-  list-style: none;
-}
+`;
 
-img {
-  width: 100%;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  overflow: hidden;
-  padding: 0 2rem;
-}
+export default GlobalStyles;

@@ -13,6 +13,10 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+.nav .container :first-child {
+  justify-self: start;
+}
+
 .nav .svgContainer {
   cursor: pointer;
 }

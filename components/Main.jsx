@@ -1,5 +1,4 @@
-import React from "react";
-import mainStyles from "../styles/Home.module.css";
+import mainStyles from "./styles/Home.module.css";
 
 function Main() {
   return (

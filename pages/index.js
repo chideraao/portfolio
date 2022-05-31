@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Main from "../components/Main";
-import styles from "../styles/Home.module.css";
+import styles from "../components/styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
         />
         <meta property="og:url" content="https://dhera.dev" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://dhera.dev/dhera.png" />
+        <meta property="og:image" content="https://dhera.dev/img/dhera.png" />
         <meta
           name="description"
           content="Human, Dera Okeke, Software engineer, Frontend developer, Technical writer, in that order. Probably figuring things out somewhere."
