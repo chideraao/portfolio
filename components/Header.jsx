@@ -3,11 +3,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMediaQuery } from "./hooks/UseMediaQuery";
 import { StyledHeader } from "./styles/Header.styled";
+import { Menu, Moon } from "./icons";
 
-function Header() {
+function Header({ theme, setTheme }) {
   const [menuClick, setMenuClick] = useState(false);
 
   let isPageSmall = useMediaQuery("(max-width: 870px)");
+
+  const changeTheme = () => {
+    document.body.classList.add("preload");
+
+    if (theme === "dark") {
+      setTheme("light");
+    } else {
+      setTheme("dark");
+    }
+
+    setTimeout(() => {
+      document.body.classList.remove("preload");
+    }, 1000);
+  };
 
   return (
     <StyledHeader>
@@ -18,7 +33,11 @@ function Header() {
               <Link href="/" aria-label="Dera Okeke home">
                 <span className="navbar-svg">
                   <Image
-                    src="/icons/logo.svg"
+                    src={
+                      theme === "dark"
+                        ? "/icons/logo.svg"
+                        : "/icons/logo-light.svg"
+                    }
                     alt="Dera's Logo"
                     width={67}
                     height={35}
@@ -29,7 +48,7 @@ function Header() {
                 className="navbar-menu"
                 onClick={() => setMenuClick(!menuClick)}
               >
-                More
+                <Menu />
               </div>
             </>
           )}
@@ -39,7 +58,11 @@ function Header() {
               <Link href="/" aria-label="Dera Okeke home">
                 <span className="navbar-svg">
                   <Image
-                    src="/icons/logo.svg"
+                    src={
+                      theme === "dark"
+                        ? "/icons/logo.svg"
+                        : "/icons/logo-light.svg"
+                    }
                     alt="Dera's Logo"
                     width={67}
                     height={35}
@@ -65,14 +88,12 @@ function Header() {
                       <span>03.</span> Contact
                     </a>
                   </li>
-                  <li aria-label="Toggle Dark mode">
+                  <li
+                    aria-label={`Change to ${theme} mode`}
+                    onClick={changeTheme}
+                  >
                     <span className="navbar-svg">
-                      <Image
-                        src="/icons/night.svg"
-                        alt="night mode switch"
-                        width={21}
-                        height={21}
-                      />
+                      <Moon />
                     </span>
                   </li>
                 </ul>

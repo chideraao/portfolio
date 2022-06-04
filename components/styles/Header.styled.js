@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
   padding: 4rem 3rem;
+  padding-top: 3.5rem;
+  max-height: 30vh;
 
   & nav .container {
     display: grid;
@@ -13,16 +15,17 @@ export const StyledHeader = styled.header`
   & nav .navbar-svg {
     cursor: pointer;
     justify-self: baseline;
+    user-select: none;
   }
 
-  .navbar-main {
+  & .navbar-main {
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
     gap: 3rem;
   }
 
-  .navbar-links {
+  & .navbar-links {
     justify-self: flex-end;
     display: flex;
     align-items: center;
@@ -31,23 +34,23 @@ export const StyledHeader = styled.header`
     font-size: 0.9rem;
   }
 
-  .navbar-links li span {
+  & .navbar-links li span {
     color: var(--primary);
     margin-right: 0.2rem;
   }
 
-  nav li a:hover {
+  & nav li a:hover {
     color: var(--primary);
   }
 
-  nav li a {
+  & nav li a {
     position: relative;
     display: block;
     padding: 5px 0;
     padding-bottom: 8px;
   }
 
-  nav li a:after {
+  & nav li a:after {
     content: "";
     position: absolute;
     width: 100%;
@@ -60,15 +63,24 @@ export const StyledHeader = styled.header`
     transition: transform 0.3s;
   }
 
-  nav li a:hover:after {
+  & nav li a:hover:after {
     transform-origin: bottom left;
     transform: scaleX(1);
+  }
+
+  & svg circle {
+    fill: var(--text);
+    stroke: var(--text);
+  }
+
+  & svg path {
+    fill: var(--bg);
   }
 
   @media (max-width: 840px) {
     padding: 2rem 1rem;
 
-    .container {
+    & .container {
       padding: 0 1rem;
       justify-content: flex-end;
       align-items: center;
@@ -77,6 +89,10 @@ export const StyledHeader = styled.header`
     & .container .navbar-menu {
       justify-self: end;
       margin-right: 0.5rem;
+    }
+
+    .navbar-menu svg path {
+      fill: var(--primary);
     }
   }
 `;

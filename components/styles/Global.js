@@ -2,14 +2,14 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 :root{
---bg: #020a13;
---heading: #e1e1e1;
---primary: #187eea;
---text: #c6c6c6
+--bg: ${({ theme }) => theme.background};
+--heading: ${({ theme }) => theme.heading};
+--primary: ${({ theme }) => theme.primary};
+--primary-alpha: ${({ theme }) => theme.primaryAlpha};
+--text: ${({ theme }) => theme.text}
 }
 
-html,
-body {
+html, body {
   padding: 0;
   margin: 0;
 }
@@ -25,8 +25,16 @@ body {
   color: var(--text);
 }
 
+.preload * {
+  transition: all 0.5s ease !important;
+}
+
 *:focus { 
   outline: none; 
+}
+
+::selection {
+  background: grey;
 }
 
 h1,
@@ -37,8 +45,14 @@ h4 {
 }
 
 a {
+  cursor: pointer;
   color: inherit;
   text-decoration: none;
+}
+
+a:hover{
+  cursor: pointer;
+  color: inherit;
 }
 
 img {

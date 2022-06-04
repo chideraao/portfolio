@@ -9,7 +9,7 @@ export default function Document() {
         <meta property="og:title" content="Dera Okeke | Software Engineer" />
         <meta
           property="og:description"
-          content=" Dera Okeke, Software engineer, Frontend developer, Technical writer, in that order. Probably figuring things out somewhere."
+          content="Dera Okeke, Software engineer, Frontend developer, Technical writer, in that order. Probably figuring things out somewhere."
         />
         <meta property="og:url" content="https://dhera.dev" />
         <meta property="og:type" content="website" />
