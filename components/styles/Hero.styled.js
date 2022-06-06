@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const StyledHero = styled.section`
-  height: 70vh;
+  min-height: 70vh;
+  max-height: 75vh;
   margin: 3rem;
   margin-bottom: 0;
 
@@ -270,13 +271,10 @@ export const StyledHero = styled.section`
   }
 
   @media (max-width: 800px) {
-    .main h1 {
-      text-align: center;
-      font-size: 1.5rem;
-    }
+    margin-bottom: 2rem;
 
-    .main p {
-      text-align: center;
+    & .intro-name {
+      font-size: 2.4rem;
     }
   }
 `;

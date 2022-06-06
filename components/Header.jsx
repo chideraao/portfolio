@@ -7,7 +7,6 @@ import { Menu, Moon } from "./icons";
 
 function Header({ theme, setTheme }) {
   const [menuClick, setMenuClick] = useState(false);
-
   let isPageSmall = useMediaQuery("(max-width: 870px)");
 
   const changeTheme = () => {
@@ -22,6 +21,12 @@ function Header({ theme, setTheme }) {
     setTimeout(() => {
       document.body.classList.remove("preload");
     }, 1000);
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      changeTheme();
+    }
   };
 
   return (
@@ -47,6 +52,8 @@ function Header({ theme, setTheme }) {
               <div
                 className="navbar-menu"
                 onClick={() => setMenuClick(!menuClick)}
+                aria-label="Open menu"
+                tabIndex="0"
               >
                 <Menu />
               </div>
@@ -55,8 +62,8 @@ function Header({ theme, setTheme }) {
 
           {!isPageSmall && (
             <>
-              <Link href="/" aria-label="Dera Okeke home">
-                <span className="navbar-svg">
+              <Link href="/" aria-label="Dera Okeke home" tabIndex="0">
+                <span className="navbar-svg" tabIndex="0" aria-label="Homepage">
                   <Image
                     src={
                       theme === "dark"
@@ -83,7 +90,7 @@ function Header({ theme, setTheme }) {
                     </a>
                   </li>
                   <li>
-                    <a href="#contacts" aria-label="Go to contacts section">
+                    <a href="#contact" aria-label="Go to contact section">
                       {" "}
                       <span>03.</span> Contact
                     </a>
@@ -91,6 +98,8 @@ function Header({ theme, setTheme }) {
                   <li
                     aria-label={`Change to ${theme} mode`}
                     onClick={changeTheme}
+                    tabIndex="0"
+                    onKeyPress={handleKeyPress}
                   >
                     <span className="navbar-svg">
                       <Moon />

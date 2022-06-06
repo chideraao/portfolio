@@ -1,9 +1,15 @@
+import About from "./About";
+import Contact from "./Contact";
 import Hero from "./Hero";
+import Projects from "./Projects";
 
-function Main() {
+function Main({ theme, setTheme }) {
   return (
-    <main className="main container">
-      <Hero />
+    <main className="main">
+      <Hero theme={theme} setTheme={setTheme} />
+      <About />
+      <Projects />
+      <Contact />
     </main>
   );
 }

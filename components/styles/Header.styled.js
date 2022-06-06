@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-  padding: 4rem 3rem;
-  padding-top: 3.5rem;
+  padding: 3rem;
+  padding-top: 2.5rem;
   max-height: 30vh;
 
   & nav .container {
@@ -12,10 +12,21 @@ export const StyledHeader = styled.header`
     padding: 0;
   }
 
+  & nav .navbar {
+    padding: 1rem 0;
+  }
+
   & nav .navbar-svg {
     cursor: pointer;
     justify-self: baseline;
     user-select: none;
+  }
+
+  & nav li:focus-visible,
+  nav .navbar-svg {
+    padding: 0;
+    padding-left: 0.2rem;
+    padding-top: 0.2rem;
   }
 
   & .navbar-main {

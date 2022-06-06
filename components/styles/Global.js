@@ -29,12 +29,19 @@ html, body {
   transition: all 0.5s ease !important;
 }
 
-*:focus { 
+*:focus-visible { 
   outline: none; 
+  border: 1px dashed var(--primary);
+  padding: 0.4rem;
+  transition: all 0.3s ease;
 }
 
 ::selection {
-  background: grey;
+  background: var(--primary-alpha);
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 h1,
@@ -69,6 +76,44 @@ ul {
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
+}
+
+.fullpage {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.main{
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+a.skip-main {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+a.skip-main:focus, a.skip-main:active {
+    color: var(--text);
+    background-color: var(--bg);
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    margin: 10px 35%;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border: 2px solid var(--primary);
+    text-align: center;
+    font-size: 1rem;
+    z-index: 999;
 }
 `;
 
