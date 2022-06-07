@@ -18,7 +18,7 @@ export const StyledHero = styled.section`
   & #intro-paragraph {
     color: var(--primary);
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
     letter-spacing: 0px;
   }
 
@@ -270,8 +270,37 @@ export const StyledHero = styled.section`
     -webkit-animation-delay: 0s; /* Safari 和 Chrome */
   }
 
+  /* ----------------------------------------------------------------------------------------------------------------------------------------------/
+  /                                                               MEDIA QUERIES                                                                   /
+  /---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+  @media (max-width: 1150px) {
+    margin: 2rem;
+
+    & article {
+      margin-bottom: 1.5rem;
+    }
+
+    & #intro-paragraph {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+
+    & .intro-name {
+      margin-bottom: 0;
+    }
+
+    & a.call-to-action {
+      margin-bottom: 1rem;
+    }
+  }
+
   @media (max-width: 800px) {
-    margin-bottom: 2rem;
+    margin: 1.5rem;
+
+    & p {
+      max-width: 75vw;
+    }
 
     & .intro-name {
       font-size: 2.4rem;

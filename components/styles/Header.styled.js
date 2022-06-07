@@ -25,7 +25,7 @@ export const StyledHeader = styled.header`
   & nav li:focus-visible,
   nav .navbar-svg {
     padding: 0;
-    padding-left: 0.2rem;
+    padding-left: 0.1rem;
     padding-top: 0.2rem;
   }
 
@@ -88,9 +88,15 @@ export const StyledHeader = styled.header`
     fill: var(--bg);
   }
 
-  @media (max-width: 840px) {
-    padding: 2rem 1rem;
+  /* ----------------------------------------------------------------------------------------------------------------------------------------------/
+  /                                                               MEDIA QUERIES                                                                   /
+  /---------------------------------------------------------------------------------------------------------------------------------------------*/
 
+  @media (max-width: 1150px) {
+    padding: 2rem 1rem;
+  }
+
+  @media (max-width: 840px) {
     & .container {
       padding: 0 1rem;
       justify-content: flex-end;
