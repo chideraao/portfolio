@@ -97,6 +97,12 @@ export const StyledHeader = styled.header`
   }
 
   @media (max-width: 840px) {
+    padding: 1.4rem 0.5rem;
+
+    & nav .navbar {
+      padding: 0;
+    }
+
     & .container {
       padding: 0 1rem;
       justify-content: flex-end;

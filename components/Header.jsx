@@ -49,13 +49,26 @@ function Header({ theme, setTheme }) {
                   />
                 </span>
               </Link>
-              <div
-                className="navbar-menu"
-                onClick={() => setMenuClick(!menuClick)}
-                aria-label="Open menu"
-                tabIndex="0"
-              >
-                <Menu />
+              <div className="">
+                {" "}
+                <div
+                  aria-label={`Change to ${theme} mode`}
+                  onClick={changeTheme}
+                  tabIndex="0"
+                  onKeyPress={handleKeyPress}
+                >
+                  <span className="navbar-svg">
+                    <Moon />
+                  </span>
+                </div>
+                <div
+                  className="navbar-menu"
+                  onClick={() => setMenuClick(!menuClick)}
+                  aria-label="Open menu"
+                  tabIndex="0"
+                >
+                  <Menu />
+                </div>
               </div>
             </>
           )}

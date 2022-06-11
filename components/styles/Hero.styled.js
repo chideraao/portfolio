@@ -55,9 +55,10 @@ export const StyledHero = styled.section`
     transition: all 0.3s ease;
   }
 
-  & div.socials a :hover {
+  & div.socials a:hover svg {
     fill: var(--primary);
-    transform: translate3d(0px, 0px, 1px) scale(1.05, 1.05);
+    transform: translate3d(0px, 0px, 1px) scale(1.1, 1.1);
+    transition: none;
   }
 
   .intro-name {

@@ -5,6 +5,9 @@ function About() {
   return (
     <StyledAbout id="about" className="fullpage">
       About
+      <div className=""></div>
+      <div className=""></div>
+      <div className=""></div>
     </StyledAbout>
   );
 }

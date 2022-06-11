@@ -120,7 +120,7 @@ const GlobalStyles = createGlobalStyle`
 
   .mouse_scroll {
     display: block;
-    width: 1.4rem;
+    width: 1.2rem;
     height: 60px;
     position: absolute;
     left: 50%;
@@ -129,10 +129,15 @@ const GlobalStyles = createGlobalStyle`
     cursor: pointer;
   }
 
-  .mouse_scroll:hover .scroll_arrows,
+
   .mouse_scroll:hover .mouse,
   .mouse_scroll:hover .wheel {
-    border-color: var(--primary);
+    border: 2px solid var(--primary);
+  }
+
+  .mouse_scroll:hover .scroll_arrows {
+    border-right: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
   }
 
   .mouse_scroll:hover .wheel {
@@ -151,8 +156,8 @@ const GlobalStyles = createGlobalStyle`
     border-bottom: 1px solid var(--text);
     margin: 1px 2px 3px 4px;
 
-    width: 10.5px;
-    height: 10.5px;
+    width: 11px;
+    height: 11px;
     -webkit-animation: mouse-scroll 1s infinite;
     -moz-animation: mouse-scroll 1s infinite;
     animation: mouse-scroll 1s infinite;
@@ -165,9 +170,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .mouse {
-    height: 1.8rem;
-    width: 1rem;
-    margin-left: 1px;
+    height: calc(2.6vh + 0.5rem);
+    width: 0.99rem;
+    margin-left: 1.4px;
     border-radius: 14px;
     transform: none;
     border: 1px solid var(--text);
