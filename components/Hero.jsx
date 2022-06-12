@@ -19,10 +19,9 @@ function Hero({ theme, setTheme }) {
 
               <div className="hero-paragraph">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime aspernatur facere voluptatum recusandae error esse fuga
-                  nesciunt, dolorum velit sint eveniet nostrum in consequuntur
-                  aperiam quidem provident ullam commodi tempora.
+                  Frontend-focused software engineer and technical writer
+                  building accessible web products with great user experiences.
+                  I enjoy teaching concepts and documenting developer guides.
                 </p>
               </div>
             </article>
@@ -76,14 +75,6 @@ function Hero({ theme, setTheme }) {
               >
                 <Twitter />
               </a>
-            </div>
-          </div>
-          <div className="mouse_scroll">
-            <div className="mouse">
-              <div className="wheel"></div>
-            </div>
-            <div>
-              <span className="scroll_arrows"></span>
             </div>
           </div>
         </StyledHero>

@@ -31,11 +31,11 @@ export const StyledHero = styled.section`
     border-radius: 5px;
     padding: 0.7rem 1.5rem;
     margin-bottom: 2rem;
-    transition: 1s;
   }
 
   a.call-to-action:hover {
     box-shadow: inset 25rem 0 0 0.1px var(--primary-alpha);
+    transition: 1s;
   }
 
   & div.socials {
@@ -52,13 +52,12 @@ export const StyledHero = styled.section`
     height: 1.4rem;
     width: 1.5rem;
     transform: translate3d(0px, 0px, 1px) scale(1, 1);
-    transition: all 0.3s ease;
   }
 
   & div.socials a:hover svg {
     fill: var(--primary);
     transform: translate3d(0px, 0px, 1px) scale(1.1, 1.1);
-    transition: none;
+    transition: all 0.5s ease;
   }
 
   .intro-name {

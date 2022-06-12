@@ -1,9 +1,13 @@
 import React from "react";
 import { StyledAbout } from "./styles/About.styled";
 
-function About() {
+function About({ pageRefs }) {
   return (
-    <StyledAbout id="about" className="fullpage">
+    <StyledAbout
+      id="about"
+      className="fullpage"
+      ref={(el) => (pageRefs.current = { ...pageRefs.current, about: el })}
+    >
       About
       <div className=""></div>
       <div className=""></div>
