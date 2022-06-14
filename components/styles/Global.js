@@ -317,6 +317,17 @@ const GlobalStyles = createGlobalStyle`
       padding: 0.5rem;
     }
   }
+
+  @media (max-width: 500px) {
+    .fullpage {
+    height: 100%;
+    scroll-snap-align: none;
+  }
+
+  .main {
+    height: 100%;
+  }
+  }
 `;
 
 export default GlobalStyles;
