@@ -13,6 +13,8 @@ const GlobalStyles = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
+    height: 100vh;
+    width: 100vw;
   }
 
   * {
@@ -81,6 +83,7 @@ const GlobalStyles = createGlobalStyle`
 
   .fullpage {
     height: 100vh;
+    width: 100vw;
     scroll-snap-align: start;
   }
 

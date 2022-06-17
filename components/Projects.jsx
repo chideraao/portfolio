@@ -8,7 +8,7 @@ function Projects({ pageRefs }) {
       className="fullpage"
       ref={(el) => (pageRefs.current = { ...pageRefs.current, projects: el })}
     >
-      Projects
+      <h1>Projects</h1>
     </StyledProjects>
   );
 }

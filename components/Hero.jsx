@@ -2,9 +2,12 @@ import Header from "./Header";
 import { Codepen, Dev, Github, LinkedIn, Twitter } from "./icons";
 import { StyledHero } from "./styles/Hero.styled";
 
-function Hero({ theme, setTheme }) {
+function Hero({ theme, setTheme, pageRefs }) {
   return (
-    <div className="fullpage">
+    <div
+      className="fullpage"
+      ref={(el) => (pageRefs.current = { ...pageRefs.current, hero: el })}
+    >
       <Header theme={theme} setTheme={setTheme} />
       <div className="container" id="main">
         <StyledHero>

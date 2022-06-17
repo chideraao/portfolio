@@ -14,6 +14,22 @@ function Main({ theme, setTheme }) {
     // use scrollIntoView to scroll to the element
   };
 
+  var stopAnimation = function () {
+    setTimeout(function () {
+      isAnimating = false;
+    }, 300);
+  };
+
+  var bottomIsReached = function (elem) {
+    var rect = elem[0].getBoundingClientRect();
+    return rect.bottom <= $(window).height();
+  };
+
+  var topIsReached = function (elem) {
+    var rect = elem[0].getBoundingClientRect();
+    return rect.top >= 0;
+  };
+
   return (
     <main className="main">
       <Hero theme={theme} setTheme={setTheme} pageRefs={pageRefs} />

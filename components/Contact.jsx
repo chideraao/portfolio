@@ -8,7 +8,7 @@ function Contact({ pageRefs }) {
       className="fullpage"
       ref={(el) => (pageRefs.current = { ...pageRefs.current, contact: el })}
     >
-      Contact
+      <h1>Contact</h1>
     </StyledContact>
   );
 }

@@ -24,8 +24,11 @@ function About({ pageRefs }) {
           </div>
         </div>
         <div className="about-content">
+          <div className="about-svg">
+            <SVGFill />
+          </div>
           <div className="about-main">
-            <h2>Engineering</h2>
+            <h3>Engineering</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
               consequuntur distinctio et rerum velit consequatur, quisquam
@@ -34,13 +37,10 @@ function About({ pageRefs }) {
               culpa.
             </p>
           </div>
-          <div className="about-svg">
-            <SVGFill />
-          </div>
         </div>
         <div className="about-content">
           <div className="about-main">
-            <h2>Others</h2>
+            <h3>Others</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
               fuga quod, ex obcaecati ut inventore adipisci molestiae libero

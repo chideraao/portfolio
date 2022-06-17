@@ -1,14 +1,21 @@
 import styled from "styled-components";
 
 export const StyledAbout = styled.section`
-  padding-top: 3rem;
+  padding-top: 3.5rem;
 
   & .container {
     height: 100%;
   }
 
   & h2 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: var(--primary);
+    padding-bottom: 0.9rem;
+  }
+
+  & h3 {
+    font-size: 2.4rem;
     font-weight: 600;
     color: var(--primary);
     padding-bottom: 0.9rem;
@@ -23,15 +30,6 @@ export const StyledAbout = styled.section`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
-  }
-
-  & .about-content:nth-child(2) {
-    grid-auto-flow: dense;
-    direction: rtl;
-  }
-
-  & .about-content:nth-child(2) {
-    text-align: end;
   }
 
   & .about-content:last-child {
