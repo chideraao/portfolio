@@ -6,7 +6,7 @@ function Contact({ pageRefs }) {
     <StyledContact
       id="contact"
       className="fullpage"
-      ref={(el) => (pageRefs.current = { ...pageRefs.current, contact: el })}
+      ref={(el) => pageRefs.current.push(el)}
     >
       <h1>Contact</h1>
     </StyledContact>

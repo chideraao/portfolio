@@ -52,6 +52,7 @@ const GlobalStyles = createGlobalStyle`
   h3,
   h4 {
     line-height: 1.3;
+    letter-spacing: 0;
   }
 
   a {

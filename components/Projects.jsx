@@ -6,9 +6,16 @@ function Projects({ pageRefs }) {
     <StyledProjects
       id="projects"
       className="fullpage"
-      ref={(el) => (pageRefs.current = { ...pageRefs.current, projects: el })}
+      ref={(el) => pageRefs.current.push(el)}
     >
-      <h1>Projects</h1>
+      <div className="container">
+        <div className="projects-content">
+          <div className="projects-heading">
+            <h2>Some personal projects</h2>
+          </div>
+          <div className="projects-main"></div>
+        </div>
+      </div>
     </StyledProjects>
   );
 }

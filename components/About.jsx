@@ -7,7 +7,7 @@ function About({ pageRefs }) {
     <StyledAbout
       id="about"
       className="fullpage"
-      ref={(el) => (pageRefs.current = { ...pageRefs.current, about: el })}
+      ref={(el) => pageRefs.current.push(el)}
     >
       <div className="container">
         <div className="about-content">
@@ -18,6 +18,7 @@ function About({ pageRefs }) {
               corporis architecto? Labore, magni hic? Perferendis dignissimos
               autem adipisci alias laborum.
             </p>
+            {/* <p>Hi, I&apos;m name, country. I code, I write and I teach.</p> */}
           </div>
           <div className="about-svg">
             <SVGFill />
@@ -47,6 +48,7 @@ function About({ pageRefs }) {
               ipsam officiis debitis repudiandae aspernatur optio culpa quos
               eveniet eligendi alias soluta.
             </p>
+            {/* <p>Exploring devrel; simplifying concepts for devs (readme)</p> */}
           </div>
           <div className="about-svg">
             <SVGFill />
