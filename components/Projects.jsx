@@ -18,15 +18,33 @@ function Projects({ pageRefs }) {
           <div className="projects-main">
             {PROJECTS_DATA.map((project, idx) => {
               return (
-                <div key={idx} className="project-item">
-                  <span className="project-media">
+                <div
+                  key={idx}
+                  className="project-item"
+                  tabIndex="0"
+                  role="gridcell"
+                >
+                  <span>
                     <Image
                       src={project.imageUrl}
                       alt={project.title}
                       width={570}
-                      height={400}
+                      height={380}
                     />
                   </span>
+                  <div className="project-content">
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                    {project.technologies && (
+                      <p className="">
+                        {project.technologies.map((tech, index) => (
+                          <span key={index} className="">
+                            {tech}
+                          </span>
+                        ))}
+                      </p>
+                    )}
+                  </div>
                 </div>
               );
             })}
