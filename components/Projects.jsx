@@ -24,14 +24,16 @@ function Projects({ pageRefs }) {
                   tabIndex="0"
                   role="gridcell"
                 >
-                  <span>
-                    <Image
-                      src={project.imageUrl}
-                      alt={project.title}
-                      width={570}
-                      height={380}
-                    />
-                  </span>
+                  <div className="project-items">
+                    <span>
+                      <Image
+                        src={project.imageUrl}
+                        alt={project.title}
+                        layout="fill"
+                      />
+                    </span>
+                  </div>
+
                   <div className="project-content">
                     <h3>{project.title}</h3>
                     <p>{project.description}</p>

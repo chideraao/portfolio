@@ -15,6 +15,10 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     height: 100vh;
     width: 100vw;
+    background-color: var(--bg);
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.5px;
+    color: var(--text);
   }
 
   * {
@@ -22,10 +26,6 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0.5px;
-    background-color: var(--bg);
-    color: var(--text);
   }
 
   .preload * {
