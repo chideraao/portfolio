@@ -1,36 +1,30 @@
 const PROJECTS_DATA = [
   {
     title: "DheraGram",
-    description: "A semi-extensive clone of the Coinbase website",
+    description: "A fully-functional, realtime chat application.",
     about:
       "Piggment is curated collection of amazingly colored gradients for designers, developers and smart creators over the world. now you can generate, explore, save, easy CSS crossbrowser gradient codes all in one place.",
     link: "https://dhera-gram.web.app/",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/dhera-gram.appspot.com/o/Screen%20Recording%202022-07-04%20at%2022.52.00.gif?alt=media&token=eef1ceeb-6776-4c08-8efa-3159166e1e9c",
     github: "https://github.com/chideraao/chatroom",
-    technologies: [
-      "React",
-      "CSS",
-      "Javascript",
-      "Context",
-      "Firebase",
-      "Node.js",
-    ],
+    technologies: ["React", "Javascript", "Context", "Firebase", "Node.js"],
   },
   {
     title: "Basecoin",
-    description: "A semi-extensive clone of the Coinbase website",
+    description: "A semi-extensive clone of the Coinbase website.",
     about:
       "Piggment is curated collection of amazingly colored gradients for designers, developers and smart creators over the world. now you can generate, explore, save, easy CSS crossbrowser gradient codes all in one place.",
     link: "https://friendly-ramanujan-2f68e3.netlify.app/",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/dhera-gram.appspot.com/o/Screen%20Recording%202022-07-01%20at%2016.07.31.gif?alt=media&token=2a7114a5-32f4-46b2-9abf-a631fefb0321",
     github: "https://github.com/chideraao/coinbase-y",
-    technologies: ["React", "CSS", "Javascript", "Context", "Chart.js"],
+    technologies: ["React", "Javascript", "Context", "Chart.js"],
   },
   {
     title: "Visualization Playground",
-    description: "A semi-extensive clone of the Coinbase website",
+    description:
+      "A small pet-project that visualizes data in a variety of ways.",
     about:
       "Piggment is curated collection of amazingly colored gradients for designers, developers and smart creators over the world. now you can generate, explore, save, easy CSS crossbrowser gradient codes all in one place.",
     link: "https://priceless-joliot-ead73b.netlify.app/",
@@ -41,7 +35,8 @@ const PROJECTS_DATA = [
   },
   {
     title: "NewsFeed",
-    description: "A semi-extensive clone of the Coinbase website",
+    description:
+      "A simple news aggregator application that fetches news from various sources.",
     about:
       "Piggment is curated collection of amazingly colored gradients for designers, developers and smart creators over the world. now you can generate, explore, save, easy CSS crossbrowser gradient codes all in one place.",
     link: "https://awesome-allen-6cf791.netlify.app/",
@@ -52,19 +47,20 @@ const PROJECTS_DATA = [
   },
   {
     title: "Markdown Previewer",
-    description: "A semi-extensive clone of the Coinbase website",
+    description:
+      "A lightweight markdown previewer application that converts markdown to HTML.",
     about:
       "Piggment is curated collection of amazingly colored gradients for designers, developers and smart creators over the world. now you can generate, explore, save, easy CSS crossbrowser gradient codes all in one place.",
     link: "https://angry-volhard-60f72f.netlify.app/",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/dhera-gram.appspot.com/o/Screen%20Recording%202022-07-04%20at%2022.30.52.gif?alt=media&token=2cef0181-4ca8-465f-a21e-2e07cb056547",
     github: "https://github.com/chideraao/markdown-previewer",
-    technologies: ["React", "CSS", "Javascript"],
+    technologies: ["React", "Javascript", "Marked.js"],
   },
 
   {
     title: "Loruki",
-    description: "A semi-extensive clone of the Coinbase website",
+    description: "A simple, lightweight website built with HTML and CSS.",
     about:
       "Piggment is curated collection of amazingly colored gradients for designers, developers and smart creators over the world. now you can generate, explore, save, easy CSS crossbrowser gradient codes all in one place.",
     link: "https://nifty-lamport-29b0a2.netlify.app/",

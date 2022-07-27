@@ -24,7 +24,7 @@ function Projects({ pageRefs }) {
                   tabIndex="0"
                   role="gridcell"
                 >
-                  <div className="project-items">
+                  <div className="image-container">
                     <span>
                       <Image
                         src={project.imageUrl}
@@ -40,9 +40,7 @@ function Projects({ pageRefs }) {
                     {project.technologies && (
                       <p className="">
                         {project.technologies.map((tech, index) => (
-                          <span key={index} className="">
-                            {tech}
-                          </span>
+                          <span key={index}>{tech}</span>
                         ))}
                       </p>
                     )}

@@ -6,7 +6,7 @@ export const StyledProjects = styled.section`
 
   & .container {
     height: 100%;
-    max-width: 1300px;
+    max-width: 1350px;
   }
 
   & h2 {
@@ -34,12 +34,17 @@ export const StyledProjects = styled.section`
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow: hidden;
     border-radius: 9px;
     break-inside: avoid;
   }
 
-  & .project-items :after {
+  /* & .image-container span {
+    position: relative;
+    width: auto;
+    height: 40rem;
+  } */
+
+  & .image-container :after {
     content: "";
     pointer-events: none;
     position: absolute;
@@ -54,6 +59,7 @@ export const StyledProjects = styled.section`
       rgba(0, 0, 0, 0.01) 5%,
       rgb(0 0 0 / 28%) 80%
     );
+    border-radius: 9px;
   }
 
   & .project-item :hover,
@@ -65,7 +71,7 @@ export const StyledProjects = styled.section`
       background: linear-gradient(
         185deg,
         rgba(0, 0, 0, 0.1) 40%,
-        rgb(0 0 0 / 90%) 80%
+        rgb(0 0 0 / 100%) 80%
       );
     }
   }
@@ -86,17 +92,74 @@ export const StyledProjects = styled.section`
     transition: all 300ms ease;
     position: absolute;
     bottom: 0rem;
+
+    width: 100%;
+    padding: 1rem 1.4rem;
+    padding-bottom: 0;
+    word-wrap: break-word;
+
+    & h3 {
+      color: #fffdfc;
+      margin-bottom: 0.1rem;
+      letter-spacing: 0.8px;
+    }
+
+    & p {
+      color: #d5d5d5;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      padding-bottom: 0.5rem;
+      width: 100%;
+
+      & span {
+        display: inline-block;
+        font-size: 11px;
+        color: #fffdfc;
+        background-color: #696869;
+        padding: 0.2rem 0.55rem;
+        border-radius: 50px;
+        white-space: nowrap;
+        margin-right: 0.4rem;
+        margin-bottom: 0.3rem;
+        font-weight: 500;
+      }
+    }
   }
 
   & .project-item:hover .project-content,
   & .project-item:focus .project-content {
     z-index: 999;
     opacity: 1;
-    bottom: 2rem;
+    bottom: 1.5rem;
   }
 
-  div.project-content h3,
-  div.project-content p {
-    color: #fff;
+  @media (max-width: 500px) {
+    & .projects-main {
+      display: block;
+    }
+
+    & .project-item {
+      margin-bottom: 2rem;
+
+      & :after {
+        opacity: 0.5;
+        background: linear-gradient(
+          185deg,
+          rgba(0, 0, 0, 0.1) 40%,
+          rgb(0 0 0 / 100%) 80%
+        );
+      }
+    }
+
+    & .image-container {
+      height: 40vh;
+      width: auto;
+    }
+
+    & .project-item .project-content {
+      z-index: 999;
+      opacity: 1;
+      bottom: 2rem;
+    }
   }
 `;
