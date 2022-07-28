@@ -5,6 +5,7 @@ export const themes = {
     text: "#040a10",
     primary: "#1864ea",
     primaryAlpha: "rgba(24, 100, 234, 0.2)",
+    sidebarProject: "#0b0c15",
   },
   dark: {
     background: "#020a13",
@@ -12,5 +13,6 @@ export const themes = {
     text: "#c6c6c6",
     primary: "#187eea",
     primaryAlpha: "rgba(24, 126, 234, 0.2)",
+    sidebarProject: "#3f566e",
   },
 };

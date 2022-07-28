@@ -1,12 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-  :root {
+   :root {
     --bg: ${({ theme }) => theme.background};
     --heading: ${({ theme }) => theme.heading};
     --primary: ${({ theme }) => theme.primary};
     --primary-alpha: ${({ theme }) => theme.primaryAlpha};
     --text: ${({ theme }) => theme.text};
+    --sidebar-projects: ${({ theme }) => theme.sidebarProject};
   }
 
   html,
@@ -132,7 +133,6 @@ const GlobalStyles = createGlobalStyle`
     bottom: 15px;
     cursor: pointer;
   }
-
 
   .mouse_scroll:hover .mouse,
   .mouse_scroll:hover .wheel {
@@ -316,6 +316,16 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  .overlay {
+    z-index: 9;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
   @media (max-width: 840px) {
     .container {
       padding: 0.5rem;
@@ -324,13 +334,13 @@ const GlobalStyles = createGlobalStyle`
 
   @media (max-width: 500px) {
     .fullpage {
-    height: 100%;
-    scroll-snap-align: none;
-  }
+      height: 100%;
+      scroll-snap-align: none;
+    }
 
-  .main {
-    height: 100%;
-  }
+    .main {
+      height: 100%;
+    }
   }
 `;
 

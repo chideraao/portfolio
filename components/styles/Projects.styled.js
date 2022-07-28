@@ -38,11 +38,11 @@ export const StyledProjects = styled.section`
     break-inside: avoid;
   }
 
-  /* & .image-container span {
+  & .image-container {
     position: relative;
+    height: 100%;
     width: auto;
-    height: 40rem;
-  } */
+  }
 
   & .image-container :after {
     content: "";
@@ -67,11 +67,11 @@ export const StyledProjects = styled.section`
     padding: 0;
 
     & :after {
-      opacity: 0.5;
+      opacity: 0.85;
       background: linear-gradient(
         185deg,
         rgba(0, 0, 0, 0.1) 40%,
-        rgb(0 0 0 / 100%) 80%
+        rgb(0 0 0 / 90%) 80%
       );
     }
   }
@@ -133,6 +133,12 @@ export const StyledProjects = styled.section`
     bottom: 1.5rem;
   }
 
+  @media (max-width: 800px) {
+    & .projects-main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   @media (max-width: 500px) {
     & .projects-main {
       display: block;
@@ -142,11 +148,11 @@ export const StyledProjects = styled.section`
       margin-bottom: 2rem;
 
       & :after {
-        opacity: 0.5;
+        opacity: 0.8;
         background: linear-gradient(
           185deg,
           rgba(0, 0, 0, 0.1) 40%,
-          rgb(0 0 0 / 100%) 80%
+          rgb(0 0 0 / 90%) 80%
         );
       }
     }
@@ -160,6 +166,65 @@ export const StyledProjects = styled.section`
       z-index: 999;
       opacity: 1;
       bottom: 2rem;
+    }
+  }
+`;
+
+export const SidebarStyled = styled.aside`
+  &.wrapper {
+    height: 100vh;
+    width: 580px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: 850ms;
+    background-color: var(--bg);
+    color: var(--text);
+    z-index: 99999;
+    max-width: 580px;
+  }
+
+  &.wrapper.active {
+    right: 0;
+    transition: 350ms;
+  }
+
+  &.wrapper .sidebar-content {
+    height: 100%;
+    padding: 2rem;
+  }
+
+  a.open-project {
+    background: var(--sidebar-projects);
+    width: inherit;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 17px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    svg {
+      width: 19px;
+      height: 19px;
+      vertical-align: bottom;
+      margin-left: 6px;
+      fill: #fff;
+    }
+  }
+
+  a.open-project:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 840px) {
+    &.wrapper {
+      width: 100vw;
+      max-width: none;
     }
   }
 `;
