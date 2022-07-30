@@ -6,7 +6,7 @@ const PROJECTS_DATA = [
       "Piggment is curated collection of amazingly colored gradients for designers, developers and smart creators over the world. now you can generate, explore, save, easy CSS crossbrowser gradient codes all in one place.",
     link: "https://dhera-gram.web.app/",
     imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/dhera-gram.appspot.com/o/Screen%20Recording%202022-07-04%20at%2022.52.00.gif?alt=media&token=eef1ceeb-6776-4c08-8efa-3159166e1e9c",
+      "https://firebasestorage.googleapis.com/v0/b/dhera-gram.appspot.com/o/Screen%20Recording%202022-07-30%20at%2013.46.38.gif?alt=media&token=eef1ceeb-6776-4c08-8efa-3159166e1e9c",
     github: "https://github.com/chideraao/chatroom",
     technologies: ["React", "Javascript", "Context", "Firebase", "Node.js"],
   },

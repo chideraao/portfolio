@@ -88,7 +88,6 @@ export const StyledProjects = styled.section`
     opacity: 0;
     pointer-events: none;
 
-    transform: translateY(10%);
     transition: all 300ms ease;
     position: absolute;
     bottom: 0rem;
@@ -174,9 +173,6 @@ export const SidebarStyled = styled.aside`
   &.wrapper {
     height: 100vh;
     width: 580px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
     position: fixed;
     top: 0;
     right: -100%;
@@ -195,9 +191,107 @@ export const SidebarStyled = styled.aside`
   &.wrapper .sidebar-content {
     height: 100%;
     padding: 2rem;
+    overflow: scroll;
   }
 
-  a.open-project {
+  & .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.9rem;
+    border-bottom: 1.5px solid var(--sidebar-border);
+
+    & svg {
+      fill: #263748;
+    }
+
+    & h3 {
+      font-size: 0.9rem;
+    }
+  }
+
+  & .sidebar-main {
+    margin: 1.5rem 0;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    margin-bottom: 0;
+
+    & p {
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: var(--sidebar-paragraph);
+
+      & span {
+        display: inline-block;
+        font-size: 11px;
+        color: var(--text);
+        background: var(--sidebar-tech);
+
+        padding: 0.35rem 0.6rem;
+        border-radius: 3px;
+        white-space: nowrap;
+        margin-right: 0.4rem;
+        margin-bottom: 0.3rem;
+        font-weight: 700;
+      }
+    }
+
+    & .sidebar-heading {
+      margin-bottom: 1.5rem;
+      width: 100%;
+
+      & h1 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.8px;
+      }
+    }
+
+    & .sidebar-desc {
+      margin-bottom: 1.5rem;
+      width: 100%;
+
+      & h2 {
+        font-size: 1.1rem;
+        letter-spacing: 0.8px;
+        font-weight: 500;
+        margin: 1.2rem 0 0.5rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0.25rem;
+      }
+
+      & a {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        font-weight: 500;
+        color: var(--sidebar-paragraph);
+      }
+
+      & a:hover {
+        text-decoration: underline;
+      }
+
+      & svg {
+        height: 1.2rem;
+        width: 1.2rem;
+        fill: var(--text);
+      }
+    }
+
+    & .image-container {
+      position: relative;
+      height: 18rem;
+      margin-bottom: 2rem;
+
+      img {
+        border-radius: 12px;
+      }
+    }
+  }
+
+  & a.open-project {
     background: var(--sidebar-projects);
     width: inherit;
     position: fixed;
@@ -216,7 +310,7 @@ export const SidebarStyled = styled.aside`
     }
   }
 
-  a.open-project:hover {
+  & a.open-project:hover {
     color: #fff;
     text-decoration: underline;
   }
@@ -225,6 +319,18 @@ export const SidebarStyled = styled.aside`
     &.wrapper {
       width: 100vw;
       max-width: none;
+    }
+
+    &.wrapper .sidebar-content {
+      padding: 1.5rem 1rem;
+    }
+
+    & .image-container {
+      height: 16rem !important;
+
+      img {
+        object-fit: cover;
+      }
     }
   }
 `;

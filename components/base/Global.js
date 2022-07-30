@@ -8,6 +8,9 @@ const GlobalStyles = createGlobalStyle`
     --primary-alpha: ${({ theme }) => theme.primaryAlpha};
     --text: ${({ theme }) => theme.text};
     --sidebar-projects: ${({ theme }) => theme.sidebarProject};
+    --sidebar-border: ${({ theme }) => theme.sidebarBorder};
+    --sidebar-paragraph: ${({ theme }) => theme.sidebarParagraph};
+    --sidebar-tech: ${({ theme }) => theme.sidebarTech};
   }
 
   html,

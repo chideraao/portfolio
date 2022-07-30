@@ -6,6 +6,9 @@ export const themes = {
     primary: "#1864ea",
     primaryAlpha: "rgba(24, 100, 234, 0.2)",
     sidebarProject: "#0b0c15",
+    sidebarBorder: "#eaeaea",
+    sidebarParagraph: "#594f4f",
+    sidebarTech: "#e5dbdb",
   },
   dark: {
     background: "#020a13",
@@ -14,5 +17,8 @@ export const themes = {
     primary: "#187eea",
     primaryAlpha: "rgba(24, 126, 234, 0.2)",
     sidebarProject: "#3f566e",
+    sidebarBorder: "#263748",
+    sidebarParagraph: "#ada0a0",
+    sidebarTech: "#2f4255",
   },
 };
