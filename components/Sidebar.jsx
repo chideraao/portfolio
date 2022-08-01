@@ -1,13 +1,20 @@
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { ArrowBack, Github, Open, Web } from "./icons";
 import { SidebarStyled } from "./styles/Projects.styled";
+import { SidebarContext } from "./utils/Context";
 
-function Sidebar() {
-  const [show, setShow] = useState(true);
+function Sidebar({ project }) {
+  const [show, setShow] = useContext(SidebarContext);
   const sidebarRef = useRef();
 
+  const handleClick = () => {
+    setShow(false);
+  };
+
   useEffect(() => {
+    sidebarRef.current.focus();
+
     /** handle click outside sidebar */
     const handleClickOutside = (event) => {
       if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
@@ -15,21 +22,21 @@ function Sidebar() {
       }
     };
 
-    const handleKeyPress = (e) => {
-      if (e.key === "Escape") {
+    const handleEscKey = (e) => {
+      if (e.key === "Escape" || e.keyCode === 27) {
         setShow(false);
       }
     };
 
     // Bind the event listeners
     document.addEventListener("mousedown", handleClickOutside);
-    document.addEventListener("keydown", handleKeyPress);
+    document.addEventListener("keydown", handleEscKey);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("keydown", handleKeyPress);
+      document.removeEventListener("keydown", handleEscKey);
     };
-  }, []);
+  }, [setShow]);
 
   return (
     <>
@@ -37,28 +44,45 @@ function Sidebar() {
         <>
           <div className="overlay"></div>
           <SidebarStyled
-            className={show ? "wrapper active" : "wrapper"}
+            className={show ? "wrapper fadeInLeft active" : "wrapper"}
             ref={sidebarRef}
+            tabIndex="0"
+            aria-label="Go back to projects"
           >
             <div className="sidebar-content">
               <div className="sidebar-header">
-                <ArrowBack />
-                <h3>Back to Projects</h3>
+                <span
+                  onClick={handleClick}
+                  aria-label="Go back to projects"
+                  tabIndex="0"
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") return handleClick();
+                  }}
+                >
+                  <ArrowBack />
+                </span>
+                <h3
+                  onClick={handleClick}
+                  aria-label="Go back to projects"
+                  tabIndex="0"
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") return handleClick();
+                  }}
+                >
+                  Back to Home
+                </h3>
               </div>
               <div className="sidebar-main">
                 <div className="sidebar-heading">
-                  <h1>Basecoin</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Rerum necessitatibus corporis excepturi magnam sit sint.
-                  </p>
+                  <h1>{project.title}</h1>
+                  <p>{project.description}</p>
                 </div>
 
                 <div className="image-container">
                   <span>
                     <Image
-                      src="https://firebasestorage.googleapis.com/v0/b/dhera-gram.appspot.com/o/Screen%20Recording%202022-07-30%20at%2013.46.38.gif?alt=media&token=eef1ceeb-6776-4c08-8efa-3159166e1e9c"
-                      alt="project-image"
+                      src={project.gifUrl || project.imageUrl}
+                      alt={`${project.title} image`}
                       layout="fill"
                     />
                   </span>
@@ -76,30 +100,31 @@ function Sidebar() {
                   </p>
                   <h2>Technologies</h2>
                   <p>
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>Chart.js</span>
-                    <span>Firebase</span>
+                    {project.technologies.map((tech, index) => {
+                      return <span key={index}>{tech}</span>;
+                    })}
                   </p>
                   <h2>
                     <Web /> Website
                   </h2>
                   <a
-                    href="https://friendly-ramanujan-2f68e3.netlify.app/"
+                    href={project.link}
                     target="_blank"
+                    aria-label={`Go to ${project.title}'s website`}
                     rel="noreferrer"
                   >
-                    https://friendly-ramanujan-2f68e3.netlify.app/
+                    {project.link}
                   </a>
                   <h2>
                     <Github /> Github
                   </h2>
                   <a
-                    href="https://github.com/chideraao/coinbase-y"
+                    href={project.github}
                     target="_blank"
                     rel="noreferrer"
+                    aria-label={`Go to ${project.title}'s Github`}
                   >
-                    https://github.com/chideraao/coinbase-y
+                    {project.github}
                   </a>
                 </div>
               </div>
@@ -108,8 +133,9 @@ function Sidebar() {
             <a
               target="_blank"
               rel="noreferrer"
-              href=""
+              href={project.link}
               className="open-project"
+              aria-label={`Go to ${project.title}'s website`}
             >
               Open Project
               <Open />

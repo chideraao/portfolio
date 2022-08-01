@@ -23,12 +23,6 @@ function Header({ theme, setTheme }) {
     }, 1000);
   };
 
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
-      changeTheme();
-    }
-  };
-
   return (
     <StyledHeader>
       <nav id="nav">
@@ -55,7 +49,9 @@ function Header({ theme, setTheme }) {
                   aria-label={`Change to ${theme} mode`}
                   onClick={changeTheme}
                   tabIndex="0"
-                  onKeyPress={handleKeyPress}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") return changeTheme();
+                  }}
                 >
                   <span className="navbar-svg">
                     <Moon />
@@ -112,7 +108,9 @@ function Header({ theme, setTheme }) {
                     aria-label={`Change to ${theme} mode`}
                     onClick={changeTheme}
                     tabIndex="0"
-                    onKeyPress={handleKeyPress}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") return changeTheme();
+                    }}
                   >
                     <span className="navbar-svg">
                       <Moon />

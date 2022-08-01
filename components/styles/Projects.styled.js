@@ -93,7 +93,7 @@ export const StyledProjects = styled.section`
     bottom: 0rem;
 
     width: 100%;
-    padding: 1rem 1.4rem;
+    padding: 0.5rem 1rem;
     padding-bottom: 0;
     word-wrap: break-word;
 
@@ -129,7 +129,7 @@ export const StyledProjects = styled.section`
   & .project-item:focus .project-content {
     z-index: 999;
     opacity: 1;
-    bottom: 1.5rem;
+    bottom: 0.5rem;
   }
 
   @media (max-width: 800px) {
@@ -164,19 +164,38 @@ export const StyledProjects = styled.section`
     & .project-item .project-content {
       z-index: 999;
       opacity: 1;
-      bottom: 2rem;
+      padding: 0 0.5rem;
+      bottom: 0;
     }
   }
 `;
 
 export const SidebarStyled = styled.aside`
+  z-index: 99999;
+
+  &.fadeInLeft {
+    animation-name: fadeLeft;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  }
+
+  @keyframes fadeLeft {
+    from {
+      opacity: 0.8;
+      transform: translateX(80%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
   &.wrapper {
     height: 100vh;
     width: 580px;
     position: fixed;
     top: 0;
     right: -100%;
-    transition: 850ms;
     background-color: var(--bg);
     color: var(--text);
     z-index: 99999;
@@ -198,15 +217,26 @@ export const SidebarStyled = styled.aside`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 0.9rem;
+    padding-bottom: 0.2rem;
     border-bottom: 1.5px solid var(--sidebar-border);
+
+    & .sidebar-header span {
+      padding: 0.4rem;
+    }
 
     & svg {
       fill: #263748;
+      cursor: pointer;
     }
 
     & h3 {
       font-size: 0.9rem;
+      padding: 0.4rem;
+      cursor: pointer;
+    }
+
+    & h3:hover {
+      text-decoration: underline;
     }
   }
 

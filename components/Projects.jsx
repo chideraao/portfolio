@@ -1,10 +1,19 @@
 import Image from "next/image";
-import React from "react";
+import React, { useContext, useState } from "react";
 import Sidebar from "./Sidebar";
 import { StyledProjects } from "./styles/Projects.styled";
+import { SidebarContext } from "./utils/Context";
 import PROJECTS_DATA from "./utils/projectsData";
 
 function Projects({ pageRefs }) {
+  const [show, setShow] = useContext(SidebarContext);
+  const [index, setIndex] = useState(0);
+
+  const handleClick = (id) => {
+    setShow(true);
+    setIndex(id);
+  };
+
   return (
     <>
       <StyledProjects
@@ -25,11 +34,15 @@ function Projects({ pageRefs }) {
                     className="project-item"
                     tabIndex="0"
                     role="gridcell"
+                    onClick={() => handleClick(idx)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") return handleClick(idx);
+                    }}
                   >
                     <div className="image-container">
                       <Image
                         src={project.imageUrl}
-                        alt={project.title}
+                        alt={`${project.title} project preview`}
                         layout="fill"
                       />
                     </div>
@@ -52,7 +65,7 @@ function Projects({ pageRefs }) {
           </div>
         </div>
       </StyledProjects>
-      <Sidebar />
+      {show ? <Sidebar project={PROJECTS_DATA[index]} /> : ""}
     </>
   );
 }
