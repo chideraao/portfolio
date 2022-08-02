@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
-  .preload * {
+  .preload  {
     transition: all 0.5s ease !important;
   }
 

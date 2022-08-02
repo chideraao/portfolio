@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import Sidebar from "./Sidebar";
 import { StyledProjects } from "./styles/Projects.styled";
 import { SidebarContext } from "./utils/Context";
-import PROJECTS_DATA from "./utils/projectsData";
+import ProjectsData from "./utils/projectsData";
 
 function Projects({ pageRefs }) {
   const [show, setShow] = useContext(SidebarContext);
@@ -27,7 +27,7 @@ function Projects({ pageRefs }) {
               <h2>Some personal projects</h2>
             </div>
             <div className="projects-main">
-              {PROJECTS_DATA.map((project, idx) => {
+              {ProjectsData.map((project, idx) => {
                 return (
                   <div
                     key={idx}
@@ -65,7 +65,7 @@ function Projects({ pageRefs }) {
           </div>
         </div>
       </StyledProjects>
-      {show ? <Sidebar project={PROJECTS_DATA[index]} /> : ""}
+      {show ? <Sidebar project={ProjectsData[index]} /> : ""}
     </>
   );
 }
