@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
     --sidebar-border: ${({ theme }) => theme.sidebarBorder};
     --sidebar-paragraph: ${({ theme }) => theme.sidebarParagraph};
     --sidebar-tech: ${({ theme }) => theme.sidebarTech};
+    --border-color: ${({ theme }) => theme.borderColor};
   }
 
   html,

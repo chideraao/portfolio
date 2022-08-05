@@ -8,42 +8,76 @@ export const StyledContact = styled.section`
   align-items: center;
   justify-content: center;
 
-  & h2 {
-    font-size: 1.9rem;
-    text-align: center;
-    font-weight: 600;
-    color: var(--primary);
-    padding-bottom: 0.9rem;
+  & .container {
+    min-width: 760px;
+  }
+
+  & .contacts-content {
+    margin-bottom: 3rem;
+
+    & h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: 600;
+      color: var(--primary);
+      padding-bottom: 0.9rem;
+      margin-bottom: 0rem;
+    }
+
+    & p {
+      text-align: center;
+    }
+
+    & a {
+      font-weight: 700;
+    }
+
+    & a:hover {
+      text-decoration: underline;
+    }
   }
 
   & .input-container {
     width: 100%;
     position: relative;
-    height: 4rem;
-    margin-bottom: 1rem;
+    height: 5rem;
+    margin-bottom: 4rem;
   }
 
   & .input-container input,
   & .input-container textarea {
     font-size: 1rem;
+    font-family: inherit;
     width: 100%;
     height: 100%;
     color: var(--primary);
-    background-color: var(--bg);
-    padding-top: 1.2rem;
-    padding-left: 2rem;
+    background-color: transparent;
     border: none;
     outline: none;
+    resize: none;
+    line-height: 1.5;
+  }
+
+  & .input-container input::placeholder,
+  & .input-container textarea::placeholder {
+    color: var(--primary);
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    text-align: start;
   }
 
   & .input-container label {
     position: absolute;
-    bottom: 0px;
+    bottom: 27px;
     left: 0;
     height: 100%;
     width: 100%;
     pointer-events: none;
-    border-bottom: 1px solid var(--text);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  & .input-container label[for="yourmessage"] {
+    bottom: 0px;
   }
 
   & .input-container label:after {
@@ -54,25 +88,8 @@ export const StyledContact = styled.section`
     bottom: -2.1px;
     width: 100%;
     border-bottom: 0 solid var(--primary);
-    transform: translateX(-100%);
+    transform: translateX(0%);
     transition: all 0.3s ease;
-  }
-
-  & .input-container span {
-    position: absolute;
-    bottom: 3px;
-    left: 0;
-    color: var(--primary);
-    transition: all 0.3s ease;
-    transform: translateY(-150%);
-    font-size: 1rem;
-    color: #5fa8d3;
-  }
-
-  .input-container input:focus + label span,
-  .input-container input:valid + label span,
-  .input-container textarea:focus + label span,
-  .input-container textarea:valid + label span {
   }
 
   .input-container input:focus + label:after,
@@ -81,5 +98,47 @@ export const StyledContact = styled.section`
   .input-container textarea:valid + label:after {
     transform: translateX(0%);
     border-bottom: 2px solid var(--primary);
+  }
+
+  & .input-container label span {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    color: var(--primary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .input-container input:focus + label span,
+  .input-container textarea:focus + label span,
+  .input-container input:valid + label span,
+  .input-container textarea:valid + label span {
+    transform: translateY(-150%);
+    font-size: 0.8rem;
+  }
+
+  .input-container input:focus,
+  .input-container textarea:focus,
+  .input-container input:valid,
+  .input-container textarea:valid {
+    padding: 0;
+  }
+
+  & button {
+    display: inline-block;
+    color: var(--primary);
+    background-color: var(--bg);
+    border: 1px solid var(--primary);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    font: inherit;
+    padding: 0.7rem 2rem;
+    margin-bottom: 2rem;
+  }
+
+  button:hover {
+    box-shadow: inset 25rem 0 0 0.1px var(--primary-alpha);
+    transition: 1s;
   }
 `;

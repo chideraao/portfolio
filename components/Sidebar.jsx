@@ -47,7 +47,7 @@ function Sidebar({ project }) {
             className={show ? "wrapper fadeInLeft active" : "wrapper"}
             ref={sidebarRef}
             tabIndex="0"
-            aria-label="Go back to projects"
+            aria-label={`View ${project.title} description`}
           >
             <div className="sidebar-content">
               <div className="sidebar-header">

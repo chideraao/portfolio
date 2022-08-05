@@ -33,7 +33,6 @@ function Projects({ pageRefs }) {
                     key={idx}
                     className="project-item"
                     tabIndex="0"
-                    role="gridcell"
                     onClick={() => handleClick(idx)}
                     onKeyDown={(e) => {
                       if (e.key === "Enter") return handleClick(idx);

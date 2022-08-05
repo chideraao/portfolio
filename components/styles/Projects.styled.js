@@ -173,6 +173,34 @@ export const StyledProjects = styled.section`
 export const SidebarStyled = styled.aside`
   z-index: 99999;
 
+  &.wrapper {
+    height: 100vh;
+    width: 580px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: var(--bg);
+    color: var(--text);
+    z-index: 99999;
+    max-width: 580px;
+    padding: 0.4rem;
+  }
+
+  &.wrapper.active {
+    right: 0;
+    transition: 350ms;
+  }
+
+  & .wrapper:focus-visible {
+    padding: 0 !important;
+  }
+
+  &.wrapper .sidebar-content {
+    height: 100%;
+    padding: 1.6rem;
+    overflow: scroll;
+  }
+
   &.fadeInLeft {
     animation-name: fadeLeft;
     animation-duration: 0.5s;
@@ -190,38 +218,14 @@ export const SidebarStyled = styled.aside`
     }
   }
 
-  &.wrapper {
-    height: 100vh;
-    width: 580px;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    background-color: var(--bg);
-    color: var(--text);
-    z-index: 99999;
-    max-width: 580px;
-  }
-
-  &.wrapper.active {
-    right: 0;
-    transition: 350ms;
-  }
-
-  &.wrapper .sidebar-content {
-    height: 100%;
-    padding: 2rem;
-    overflow: scroll;
-  }
-
   & .sidebar-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 0.2rem;
     border-bottom: 1.5px solid var(--sidebar-border);
 
-    & .sidebar-header span {
-      padding: 0.4rem;
+    & span {
+      padding: 0.24rem;
     }
 
     & svg {
