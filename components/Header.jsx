@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useMediaQuery } from "./hooks/UseMediaQuery";
@@ -12,9 +12,12 @@ function Header({ theme, setTheme }) {
   const changeTheme = () => {
     document.body.classList.add("preload");
 
-    if (theme === "dark") {
+    const themes = localStorage.getItem("theme");
+    if (themes === "dark") {
+      localStorage.setItem("theme", "light");
       setTheme("light");
     } else {
+      localStorage.setItem("theme", "dark");
       setTheme("dark");
     }
 

@@ -18,6 +18,7 @@ export const StyledHero = styled.section`
   & #intro-paragraph {
     color: var(--primary);
     font-size: 1.5rem;
+    font-weight: 500;
     margin-bottom: 0.7rem;
     letter-spacing: 0px;
   }
@@ -35,7 +36,7 @@ export const StyledHero = styled.section`
 
   a.call-to-action:hover {
     box-shadow: inset 25rem 0 0 0.1px var(--primary-alpha);
-    transition: 1s;
+    transition: 2s;
   }
 
   & div.socials {

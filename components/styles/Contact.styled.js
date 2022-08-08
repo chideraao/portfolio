@@ -139,6 +139,6 @@ export const StyledContact = styled.section`
 
   button:hover {
     box-shadow: inset 25rem 0 0 0.1px var(--primary-alpha);
-    transition: 1s;
+    transition: 2s;
   }
 `;

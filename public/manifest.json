@@ -1,0 +1,32 @@
+{
+    "theme_color": "#020a13",
+    "background_color": "#fffafc",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "Dera Okeke | Software Engineer",
+    "short_name": "Dera's Portfolio",
+    "description": "Dera Okeke, Software engineer, Frontend developer, Technical writer, in that order. Probably figuring things out somewhere.",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

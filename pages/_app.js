@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import Layout from "../components/Layout";
 import GlobalStyles from "../components/base/Global.js";
@@ -7,6 +7,21 @@ import { SidebarProvider } from "../components/utils/Context.jsx";
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    if (
+      localStorage.theme === "dark"
+      // ||
+      // (!("theme" in localStorage) &&
+      //   window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  console.log(theme);
 
   return (
     <SidebarProvider>

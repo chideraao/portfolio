@@ -5,6 +5,7 @@ export default function Document() {
     <Html>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#020a13" />
         <meta property="og:title" content="Dera Okeke | Software Engineer" />
         <meta
