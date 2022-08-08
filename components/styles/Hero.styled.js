@@ -34,7 +34,8 @@ export const StyledHero = styled.section`
     margin-bottom: 2rem;
   }
 
-  a.call-to-action:hover {
+  a.call-to-action:hover,
+  a.call-to-action:focus {
     box-shadow: inset 25rem 0 0 0.1px var(--primary-alpha);
     transition: 2s;
   }

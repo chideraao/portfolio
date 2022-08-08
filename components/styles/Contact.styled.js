@@ -26,6 +26,10 @@ export const StyledContact = styled.section`
 
     & p {
       text-align: center;
+      margin: 0 auto;
+      max-width: 550px;
+      font-size: 1.2rem;
+      line-height: 1.5;
     }
 
     & a {
@@ -137,7 +141,8 @@ export const StyledContact = styled.section`
     margin-bottom: 2rem;
   }
 
-  button:hover {
+  button:hover,
+  button:focus {
     box-shadow: inset 25rem 0 0 0.1px var(--primary-alpha);
     transition: 2s;
   }

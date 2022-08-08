@@ -10,18 +10,15 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     if (
-      localStorage.theme === "dark"
-      // ||
-      // (!("theme" in localStorage) &&
-      //   window.matchMedia("(prefers-color-scheme: dark)").matches)
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
       setTheme("dark");
     } else {
       setTheme("light");
     }
   }, []);
-
-  console.log(theme);
 
   return (
     <SidebarProvider>
