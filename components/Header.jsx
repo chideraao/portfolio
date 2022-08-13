@@ -4,10 +4,11 @@ import Link from "next/link";
 import { useMediaQuery } from "./hooks/UseMediaQuery";
 import { StyledHeader } from "./styles/Header.styled";
 import { Menu, Moon } from "./icons";
+import MenuSidebar from "./MenuSidebar";
 
 function Header({ theme, setTheme }) {
   const [menuClick, setMenuClick] = useState(false);
-  let isPageSmall = useMediaQuery("(max-width: 870px)");
+  let isMobile = useMediaQuery("(max-width: 870px)");
 
   const changeTheme = () => {
     document.body.classList.add("preload");
@@ -30,7 +31,7 @@ function Header({ theme, setTheme }) {
     <StyledHeader>
       <nav id="nav">
         <div className="navbar container">
-          {isPageSmall && (
+          {isMobile && (
             <>
               <Link href="/" aria-label="Dera Okeke home">
                 <span className="navbar-svg">
@@ -46,33 +47,28 @@ function Header({ theme, setTheme }) {
                   />
                 </span>
               </Link>
-              <div className="">
-                {" "}
-                <div
-                  aria-label={`Change to ${theme} mode`}
-                  onClick={changeTheme}
-                  tabIndex="0"
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") return changeTheme();
-                  }}
-                >
-                  <span className="navbar-svg">
-                    <Moon />
-                  </span>
-                </div>
-                <div
-                  className="navbar-menu"
-                  onClick={() => setMenuClick(!menuClick)}
-                  aria-label="Open menu"
-                  tabIndex="0"
-                >
-                  <Menu />
-                </div>
+              <div
+                className="navbar-menu"
+                onClick={() => setMenuClick(!menuClick)}
+                aria-label="Open menu"
+                tabIndex="0"
+              >
+                <Menu menuClick={menuClick} />
               </div>
+              {menuClick ? (
+                <MenuSidebar
+                  theme={theme}
+                  setTheme={setTheme}
+                  menuClick={menuClick}
+                  setMenuClick={setMenuClick}
+                />
+              ) : (
+                ""
+              )}
             </>
           )}
 
-          {!isPageSmall && (
+          {!isMobile && (
             <>
               <Link href="/" aria-label="Dera Okeke home" tabIndex="0">
                 <span className="navbar-svg" tabIndex="0" aria-label="Homepage">
