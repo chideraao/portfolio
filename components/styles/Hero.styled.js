@@ -7,8 +7,9 @@ export const StyledHero = styled.section`
   margin-bottom: 0;
 
   & p {
-    max-width: 50vw;
+    max-width: 700px;
     line-height: 1.7rem;
+    margin-left: 0.2rem;
   }
 
   & article {
@@ -17,10 +18,10 @@ export const StyledHero = styled.section`
 
   & #intro-paragraph {
     color: var(--primary);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
-    margin-bottom: 0.7rem;
-    letter-spacing: 0px;
+    letter-spacing: 0.7px;
+    margin-bottom: 0.2rem;
   }
 
   & a.call-to-action {
@@ -38,6 +39,7 @@ export const StyledHero = styled.section`
   a.call-to-action:focus {
     box-shadow: inset 25rem 0 0 0.1px var(--primary-alpha);
     transition: 2s;
+    margin-left: 0.2rem;
   }
 
   & div.socials {
@@ -45,6 +47,7 @@ export const StyledHero = styled.section`
     align-items: center;
     justify-content: flex-start;
     gap: 1.5rem;
+    margin-left: 0.2rem;
     margin-top: 1rem;
   }
 
@@ -63,12 +66,12 @@ export const StyledHero = styled.section`
   }
 
   .intro-name {
-    font-size: 4rem;
+    font-size: clamp(3rem, 6.2vw + 0.2rem, 4.5rem);
     font-weight: 900;
-    margin-bottom: 0.5rem;
     position: relative;
-    letter-spacing: -1.1px;
+    letter-spacing: -1.7px;
     color: var(--heading);
+    margin-bottom: 0.3rem;
 
     &::before,
     &::after {
@@ -279,6 +282,10 @@ export const StyledHero = styled.section`
   @media (max-width: 1150px) {
     margin: 2rem;
 
+    .container & {
+      margin: 3rem 4.5rem;
+    }
+
     & article {
       margin-bottom: 1.5rem;
     }
@@ -295,6 +302,10 @@ export const StyledHero = styled.section`
     & a.call-to-action {
       margin-bottom: 1rem;
     }
+
+    & div.socials {
+      gap: 2rem;
+    }
   }
 
   @media (max-width: 800px) {
@@ -307,5 +318,9 @@ export const StyledHero = styled.section`
     & .intro-name {
       font-size: 2.4rem;
     }
+  }
+
+  @media (max-width: 450px) {
+    margin: 0rem;
   }
 `;

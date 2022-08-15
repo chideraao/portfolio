@@ -1,5 +1,5 @@
 import React from "react";
-import { SVGFill } from "./icons";
+import { SVGFill, SVGFill2, SVGFill3, SVGFill4, SVGFill5 } from "./icons";
 import { StyledAbout } from "./styles/About.styled";
 
 function About({ pageRefs }) {
@@ -20,14 +20,9 @@ function About({ pageRefs }) {
             </p>
             {/* <p>Hi, I&apos;m name, country. I code, I write and I teach.</p> */}
           </div>
-          <div className="about-svg">
-            <SVGFill />
-          </div>
         </div>
         <div className="about-content">
-          <div className="about-svg">
-            <SVGFill />
-          </div>
+          <div></div>
           <div className="about-main">
             <h3>Engineering</h3>
             <p>
@@ -49,9 +44,6 @@ function About({ pageRefs }) {
               eveniet eligendi alias soluta.
             </p>
             {/* <p>Exploring devrel; simplifying concepts for devs (readme)</p> */}
-          </div>
-          <div className="about-svg">
-            <SVGFill />
           </div>
         </div>
       </div>

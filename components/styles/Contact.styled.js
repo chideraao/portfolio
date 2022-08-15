@@ -45,7 +45,7 @@ export const StyledContact = styled.section`
     width: 100%;
     position: relative;
     height: 5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   & .input-container input,
@@ -137,7 +137,7 @@ export const StyledContact = styled.section`
     border-radius: 5px;
     font-size: 1rem;
     font: inherit;
-    padding: 0.7rem 2rem;
+    padding: 1rem 3rem;
     margin-bottom: 2rem;
   }
 
@@ -145,5 +145,21 @@ export const StyledContact = styled.section`
   button:focus {
     box-shadow: inset 25rem 0 0 0.1px var(--primary-alpha);
     transition: 2s;
+  }
+
+  @media (max-width: 840px) {
+    & .container {
+      min-width: 500px;
+      max-width: 500px;
+    }
+
+    & .contacts-content h2 {
+      font-size: 2.2rem;
+    }
+
+    & .contacts-content p {
+      max-width: 400px;
+      font-size: 1.1rem;
+    }
   }
 `;

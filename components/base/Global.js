@@ -24,6 +24,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Montserrat", sans-serif;
     letter-spacing: 0.5px;
     color: var(--text);
+    font-size: 1em;
   }
 
   * {
@@ -132,9 +133,9 @@ const GlobalStyles = createGlobalStyle`
     width: 1.2rem;
     height: 60px;
     position: absolute;
-    left: 50%;
+    left: 87%;
     margin-left: -12px;
-    bottom: 15px;
+    bottom: 7%;
     cursor: pointer;
   }
 
@@ -154,18 +155,14 @@ const GlobalStyles = createGlobalStyle`
 
   .scroll_arrows {
     display: block;
-    width: 5px;
-    height: 3px;
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 
     border-right: 1px solid var(--text);
     border-bottom: 1px solid var(--text);
-    margin: 1px 2px 3px 4px;
+    margin: 1px 2px 3px 5px;
 
-    width: 11px;
-    height: 11px;
+    width: 17px;
+    height: 17px;
     -webkit-animation: mouse-scroll 1s infinite;
     -moz-animation: mouse-scroll 1s infinite;
     animation: mouse-scroll 1s infinite;
@@ -178,8 +175,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .mouse {
-    height: calc(2.6vh + 0.5rem);
-    width: 0.99rem;
+    height: calc(4.6vh + 0.5rem);
+    width: 1.5rem;
     margin-left: 1.4px;
     border-radius: 14px;
     transform: none;
@@ -188,15 +185,13 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .wheel {
-    height: 5px;
-    width: 2px;
     display: block;
     margin: 5px auto;
     background: var(--text);
     position: relative;
 
-    height: 4px;
-    width: 4px;
+    height: 6px;
+    width: 6px;
     border: 1px solid var(--text);
     -webkit-border-radius: 8px;
     border-radius: 8px;
@@ -330,9 +325,31 @@ const GlobalStyles = createGlobalStyle`
     background-color: rgba(0, 0, 0, 0.75);
   }
 
+  @media (max-width: 1200px) {
+    .mouse_scroll {
+     left: 95%;
+    }
+  }
+
   @media (max-width: 840px) {
+    html {
+      font-size: .8rem;
+    }
+
     .container {
       padding: 0.5rem;
+    }
+
+    .mouse_scroll{
+      display: none;
+    }
+
+    .wheel{
+      display: none;
+    }
+
+    .scroll_arrows{
+      display: none;
     }
   }
 

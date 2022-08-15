@@ -97,7 +97,7 @@ export const StyledHeader = styled.header`
   }
 
   @media (max-width: 840px) {
-    padding: 2rem 0.5rem;
+    padding: 4rem 01rem;
     margin-bottom: 3rem;
 
     & nav .navbar {
@@ -114,7 +114,7 @@ export const StyledHeader = styled.header`
     & .container .navbar-menu {
       justify-self: end;
       position: absolute;
-      z-index: 9999999;
+      z-index: 9999999999;
     }
 
     .navbar-menu svg {
@@ -169,7 +169,7 @@ export const StyledHeader = styled.header`
 `;
 
 export const StyledMenu = styled.div`
-  z-index: 999;
+  z-index: 9999999;
   padding: 2.7rem 1.7rem;
 
   height: 100vh;
@@ -179,7 +179,7 @@ export const StyledMenu = styled.div`
   right: -100%;
   background-color: var(--bg);
   color: var(--text);
-  z-index: 999;
+  z-index: 9999999;
   max-width: 580px;
   right: 0;
   transition: 350ms;
