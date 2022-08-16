@@ -18,7 +18,7 @@ export const StyledHero = styled.section`
 
   & #intro-paragraph {
     color: var(--primary);
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 2.7vw - 0.2rem, 1.5rem);
     font-weight: 500;
     letter-spacing: 0.7px;
     margin-bottom: 0.2rem;
@@ -69,7 +69,7 @@ export const StyledHero = styled.section`
     font-size: clamp(3rem, 6.2vw + 0.2rem, 4.5rem);
     font-weight: 900;
     position: relative;
-    letter-spacing: -1.7px;
+    letter-spacing: -2.5px;
     color: var(--heading);
     margin-bottom: 0.3rem;
 
@@ -228,58 +228,11 @@ export const StyledHero = styled.section`
     }
   }
 
-  .arrows {
-    width: 60px;
-    height: 72px;
-    position: absolute;
-    left: 50%;
-    margin-left: -30px;
-    bottom: 20px;
-  }
-
-  .arrows path {
-    stroke: #2994d1;
-    fill: transparent;
-    stroke-width: 1px;
-    animation: arrow 2s infinite;
-    -webkit-animation: arrow 2s infinite;
-  }
-
-  @keyframes arrow {
-    0% {
-      opacity: 0;
-    }
-    40% {
-      opacity: 1;
-    }
-    80% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  .arrows path.a1 {
-    animation-delay: -1s;
-    -webkit-animation-delay: -1s; /* Safari 和 Chrome */
-  }
-
-  .arrows path.a2 {
-    animation-delay: -0.5s;
-    -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
-  }
-
-  .arrows path.a3 {
-    animation-delay: 0s;
-    -webkit-animation-delay: 0s; /* Safari 和 Chrome */
-  }
-
   /* ----------------------------------------------------------------------------------------------------------------------------------------------/
   /                                                               MEDIA QUERIES                                                                   /
   /---------------------------------------------------------------------------------------------------------------------------------------------*/
 
-  @media (max-width: 1150px) {
+  @media (max-width: 1200px) {
     margin: 2rem;
 
     .container & {

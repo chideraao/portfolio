@@ -97,7 +97,7 @@ export const StyledHeader = styled.header`
   }
 
   @media (max-width: 840px) {
-    padding: 4rem 01rem;
+    padding: 3rem 1rem;
     margin-bottom: 3rem;
 
     & nav .navbar {
@@ -170,7 +170,7 @@ export const StyledHeader = styled.header`
 
 export const StyledMenu = styled.div`
   z-index: 9999999;
-  padding: 2.7rem 1.7rem;
+  padding: 3.9rem 1.7rem;
 
   height: 100vh;
   width: 100vw;
@@ -180,7 +180,6 @@ export const StyledMenu = styled.div`
   background-color: var(--bg);
   color: var(--text);
   z-index: 9999999;
-  max-width: 580px;
   right: 0;
   transition: 350ms;
 

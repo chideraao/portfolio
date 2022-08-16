@@ -28,6 +28,7 @@ function MenuSidebar({ theme, setTheme, menuClick, setMenuClick }) {
           onClick={changeTheme}
           style={{
             paddingBottom: "3rem",
+            maxWidth: "2%",
           }}
           tabIndex="0"
           onKeyDown={(e) => {

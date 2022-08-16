@@ -10,7 +10,7 @@ function Hero({ theme, setTheme, pageRefs }) {
         <StyledHero>
           <div className="hero-content">
             <article>
-              <p id="intro-paragraph">Hi, my name is</p>
+              <p id="intro-paragraph">Hello! My name is</p>
               <div className="big-name">
                 <h1 className="intro-name" data-text="Dera Okeke">
                   Dera Okeke
