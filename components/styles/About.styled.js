@@ -42,6 +42,22 @@ export const StyledAbout = styled.section`
     justify-content: center;
   }
 
+  @media (max-width: 850px) {
+    padding-top: 1.5rem;
+
+    & .container {
+      padding: 1.5rem 2rem;
+    }
+
+    & h2 {
+      font-size: 2.2rem;
+    }
+
+    & h3 {
+      font-size: 2rem;
+    }
+  }
+
   @media (max-width: 500px) {
     & .about-content {
       display: block;

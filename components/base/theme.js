@@ -10,6 +10,7 @@ export const themes = {
     sidebarParagraph: "#594f4f",
     sidebarTech: "#e5dbdb",
     borderColor: "rgba(24, 100, 234, 0.5)",
+    socialsBlur: "#f6f4f06b",
   },
   dark: {
     background: "#020a13",
@@ -22,5 +23,6 @@ export const themes = {
     sidebarParagraph: "#ada0a0",
     sidebarTech: "#2f4255",
     borderColor: "rgba(24, 126, 234, 0.5)",
+    socialsBlur: "#07121dd4",
   },
 };

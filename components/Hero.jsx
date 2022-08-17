@@ -2,7 +2,14 @@ import Header from "./Header";
 import { Codepen, Dev, Github, LinkedIn, Twitter } from "./icons";
 import { StyledHero } from "./styles/Hero.styled";
 
-function Hero({ theme, setTheme, pageRefs }) {
+function Hero({ theme, setTheme, pageRefs, active }) {
+  const scrollToSection = () => {
+    let next = pageRefs.current[1];
+    next.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="fullpage" ref={(el) => pageRefs.current.push(el)}>
       <Header theme={theme} setTheme={setTheme} />
@@ -77,6 +84,25 @@ function Hero({ theme, setTheme, pageRefs }) {
               </a>
             </div>
           </div>
+          {active <= 2 ? (
+            <div
+              className="mouse_scroll"
+              onClick={scrollToSection}
+              tabIndex="0"
+              onKeyDown={(e) => {
+                if (e.key === "Enter") return scrollToSection();
+              }}
+            >
+              <div className="mouse">
+                <div className="wheel"></div>
+              </div>
+              <div>
+                <span className="scroll_arrows"></span>
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
         </StyledHero>
       </div>
     </div>

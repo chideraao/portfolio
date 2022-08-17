@@ -132,15 +132,13 @@ export const StyledProjects = styled.section`
     bottom: 0.5rem;
   }
 
-  @media (max-width: 800px) {
-    & .projects-main {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
+  @media (max-width: 850px) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
-  @media (max-width: 500px) {
-    & .projects-main {
-      display: block;
+    & h2 {
+      margin-bottom: 1rem;
+      font-size: 1.7rem;
     }
 
     & .project-item {
@@ -156,16 +154,34 @@ export const StyledProjects = styled.section`
       }
     }
 
-    & .image-container {
-      height: 40vh;
-      width: auto;
-    }
-
     & .project-item .project-content {
       z-index: 999;
       opacity: 1;
-      padding: 0 0.5rem;
-      bottom: 0;
+      padding: 0 1.2rem;
+      bottom: 5px;
+    }
+
+    & .projects-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    & .image-container {
+      height: 50vh;
+      width: 75vh;
+    }
+  }
+
+  @media (max-width: 500px) {
+    & .project-item {
+      margin-bottom: 2rem;
+    }
+
+    & .image-container {
+      height: 40vh;
+      width: auto;
     }
   }
 `;
@@ -353,14 +369,19 @@ export const SidebarStyled = styled.aside`
     &.wrapper {
       width: 100vw;
       max-width: none;
+      padding: 0.4rem 1.3rem;
     }
 
     &.wrapper .sidebar-content {
       padding: 1.5rem 1rem;
     }
 
+    & .sidebar-main p {
+      font-size: 0.9rem;
+    }
+
     & .image-container {
-      height: 16rem !important;
+      height: 22rem !important;
 
       img {
         object-fit: cover;
