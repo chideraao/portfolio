@@ -99,7 +99,7 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    opacity: 0;
+    /* opacity: 0; */
   }
 
   a.skip-main {
@@ -196,7 +196,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   @media (max-width: 500px) {
-   
+    .container {
+      padding: 0;
+    }
   }
 `;
 

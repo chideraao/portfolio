@@ -1,4 +1,5 @@
 import React from "react";
+import { Codepen, Dev, Github, LinkedIn, Twitter } from "./icons";
 import { StyledContact } from "./styles/Contact.styled";
 
 function Contact({ pageRefs }) {
@@ -31,7 +32,7 @@ function Contact({ pageRefs }) {
         >
           <input type="hidden" name="form-name" value="contact" />
           <div
-            className=""
+            className="input-flex"
             style={{
               display: "flex",
               justifyContent: "space-between",
@@ -79,11 +80,58 @@ function Contact({ pageRefs }) {
               <span style={{ bottom: "60px" }}>Enter Your Message</span>
             </label>
           </div>
-          <div style={{ textAlign: "center" }}>
+          <div className="contacts-btn" style={{ textAlign: "center" }}>
             <button type="submit"> Let&apos;s talk. 🤺</button>
           </div>
         </form>
       </div>
+      <footer className="footer">
+        <div className="container">
+          <p>&copy; Dera Okeke {new Date().getUTCFullYear()}</p>
+          <div className="socials">
+            <a
+              href="https://github.com/chideraao"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Go to Dera Okeke's Github"
+            >
+              <Github />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dera-okeke-295718178/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Go to Dera Okeke's LinkedIn"
+            >
+              <LinkedIn />
+            </a>
+            <a
+              href="https://dev.to/chideraao"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Go to Dera Okeke's Dev.to"
+            >
+              <Dev />
+            </a>
+            <a
+              href="https://codepen.io/chideraao"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Go to Dera Okeke's Codepen"
+            >
+              <Codepen />
+            </a>
+            <a
+              href="https://twitter.com/Chideraa_O"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Go to Dera Okeke's Twitter"
+            >
+              <Twitter />
+            </a>
+          </div>
+        </div>
+      </footer>
     </StyledContact>
   );
 }

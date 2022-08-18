@@ -61,10 +61,25 @@ export const StyledAbout = styled.section`
   @media (max-width: 500px) {
     & .about-content {
       display: block;
+      margin-bottom: 3rem;
     }
 
     & .about-svg {
       display: none;
+    }
+
+    & h2 {
+      font-size: 2rem;
+    }
+
+    & h3 {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 430px) {
+    & .container {
+      padding: 1.5rem;
     }
   }
 `;

@@ -166,6 +166,11 @@ export const StyledHeader = styled.header`
       stroke-dashoffset: -64px;
     }
   }
+
+  @media (max-width: 470px) {
+    padding: 2rem 1rem;
+    margin-bottom: 3rem;
+  }
 `;
 
 export const StyledMenu = styled.div`
@@ -220,5 +225,9 @@ export const StyledMenu = styled.div`
     gap: 3rem;
     font-size: 1.2rem;
     font-weight: 500;
+  }
+
+  @media (max-width: 470px) {
+    padding: 3rem 1.7rem;
   }
 `;

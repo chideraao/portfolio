@@ -7,6 +7,7 @@ export const StyledContact = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   & .container {
     min-width: 760px;
@@ -89,7 +90,7 @@ export const StyledContact = styled.section`
     position: absolute;
     height: 100%;
     left: 0;
-    bottom: -2.1px;
+    bottom: -1px;
     width: 100%;
     border-bottom: 0 solid var(--primary);
     transform: translateX(0%);
@@ -147,6 +148,50 @@ export const StyledContact = styled.section`
     transition: 2s;
   }
 
+  footer.footer {
+    width: 100%;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    color: var(--primary);
+
+    & .container {
+      border-top: 1px solid var(--primary-alpha);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90% !important;
+      max-width: none;
+    }
+
+    & .container p {
+      margin-top: 0.5rem;
+    }
+
+    & div.socials {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      margin-left: 0.2rem;
+      margin-top: 1rem;
+    }
+
+    & div.socials svg {
+      fill: ${({ theme }) =>
+        theme.background === "#fffdfc" ? "#545454" : "var(--text)"};
+      height: 1.4rem;
+      width: 1.5rem;
+      transform: translate3d(0px, 0px, 1px) scale(1, 1);
+    }
+
+    & div.socials a:hover svg {
+      fill: var(--primary);
+      transform: translate3d(0px, 0px, 1px) scale(1.1, 1.1);
+      transition: all 0.5s ease;
+    }
+  }
+
   @media (max-width: 840px) {
     & .container {
       min-width: 500px;
@@ -160,6 +205,80 @@ export const StyledContact = styled.section`
     & .contacts-content p {
       max-width: 400px;
       font-size: 1.1rem;
+    }
+
+    & .contacts-btn {
+      margin: 4rem 0;
+    }
+
+    footer.footer .container {
+      padding: 0 1.5rem;
+      /* padding-bottom: 0; */
+    }
+  }
+
+  @media (max-width: 470px) {
+    & .container {
+      min-width: 0;
+      max-width: none;
+    }
+
+    & .contacts-content {
+      margin-bottom: 1.4rem;
+    }
+
+    & .contacts-content h2 {
+      font-size: 2rem;
+    }
+
+    & .contacts-content p {
+      max-width: 400px;
+      font-size: 1rem;
+    }
+
+    & form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & .input-flex {
+      display: block !important;
+      margin-bottom: 2.5rem;
+    }
+
+    & .input-container {
+      margin-bottom: 0;
+      width: 70vw;
+    }
+
+    & .input-container input,
+    & .input-container textarea {
+      height: 80%;
+    }
+
+    & .contacts-btn {
+      margin: 5rem 0;
+    }
+
+    & footer.footer {
+      padding-bottom: 3rem;
+
+      & div.socials {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 430px) {
+    margin-top: 2rem;
+
+    & .input-container {
+      width: 80vw;
+    }
+
+    & .contacts-btn {
+      margin-bottom: 6rem;
     }
   }
 `;

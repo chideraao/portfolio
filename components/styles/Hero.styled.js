@@ -489,7 +489,62 @@ export const StyledHero = styled.section`
     }
   }
 
-  @media (max-width: 450px) {
-    margin: 0rem;
+  @media (max-width: 470px) {
+    .container & {
+      margin: 0rem;
+    }
+
+    & p {
+      max-width: 85vw;
+      margin-bottom: 1.7rem;
+    }
+
+    & #intro-paragraph {
+      margin-bottom: 0.3rem;
+    }
+
+    & .hero-content article {
+      margin: 1.5rem;
+      padding: 1.5rem;
+      margin-bottom: 0;
+    }
+
+    & a.call-to-action {
+      margin-left: 3rem;
+    }
+
+    & div.socials {
+      position: fixed;
+      height: 3.5rem;
+      width: 100%;
+      background-color: var(--socials-blur);
+      bottom: 0;
+      gap: 2rem;
+      justify-content: space-evenly;
+      margin-left: 0;
+      z-index: 9999;
+      backdrop-filter: blur(21px);
+    }
+
+    .mouse {
+      margin-left: 2.1px;
+    }
+
+    .mouse_scroll {
+      left: 90%;
+      bottom: 0%;
+    }
+  }
+
+  @media (max-width: 430px) {
+    & .hero-content article {
+      margin: 1rem;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    & a.call-to-action {
+      margin-left: 2rem;
+    }
   }
 `;

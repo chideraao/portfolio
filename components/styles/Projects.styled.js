@@ -175,19 +175,33 @@ export const StyledProjects = styled.section`
   }
 
   @media (max-width: 500px) {
+    & .projects-heading {
+      margin-left: 1.5rem;
+    }
+
     & .project-item {
       margin-bottom: 2rem;
     }
 
     & .image-container {
       height: 40vh;
-      width: auto;
+      width: 90vw;
+    }
+  }
+
+  @media (max-width: 430px) {
+    & .projects-heading {
+      margin-left: 1.1rem;
+    }
+
+    & .image-container {
+      width: 94vw;
     }
   }
 `;
 
 export const SidebarStyled = styled.aside`
-  z-index: 99999;
+  z-index: 999999999999999;
 
   &.wrapper {
     height: 100vh;
@@ -386,6 +400,16 @@ export const SidebarStyled = styled.aside`
       img {
         object-fit: cover;
       }
+    }
+  }
+
+  @media (max-width: 470px) {
+    &.wrapper {
+      padding: 0.4rem;
+    }
+
+    &.wrapper .sidebar-content {
+      padding: 1.5rem 0.7rem;
     }
   }
 `;
