@@ -12,11 +12,6 @@ const nextConfig = {
   images: {
     domains: ["firebasestorage.googleapis.com"],
   },
-  experimental: {
-    images: {
-      unoptimized: true,
-    },
-  },
 };
 
 module.exports = withPWA(nextConfig);

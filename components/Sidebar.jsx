@@ -84,6 +84,7 @@ function Sidebar({ project }) {
                       src={project.gifUrl || project.imageUrl}
                       alt={`${project.title} image`}
                       layout="fill"
+                      unoptimized={true}
                     />
                   </span>
                 </div>

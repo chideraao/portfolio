@@ -43,6 +43,7 @@ function Projects({ pageRefs }) {
                         src={project.imageUrl}
                         alt={`${project.title} project preview`}
                         layout="fill"
+                        unoptimized={true}
                       />
                     </div>
 
