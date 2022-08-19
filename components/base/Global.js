@@ -13,6 +13,8 @@ const GlobalStyles = createGlobalStyle`
     --sidebar-tech: ${({ theme }) => theme.sidebarTech};
     --border-color: ${({ theme }) => theme.borderColor};
     --socials-blur: ${({ theme }) => theme.socialsBlur};
+    --success: ${({ theme }) => theme.success};
+    --success-card: ${({ theme }) => theme.successCard};
   }
 
   html,

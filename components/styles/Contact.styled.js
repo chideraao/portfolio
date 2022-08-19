@@ -262,7 +262,7 @@ export const StyledContact = styled.section`
     }
 
     & footer.footer {
-      padding-bottom: 3rem;
+      padding-bottom: 4rem;
 
       & div.socials {
         display: none;

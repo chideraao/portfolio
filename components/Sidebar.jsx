@@ -69,7 +69,7 @@ function Sidebar({ project }) {
                     if (e.key === "Enter") return handleClick();
                   }}
                 >
-                  Back to Home
+                  Back to Main
                 </h3>
               </div>
               <div className="sidebar-main">

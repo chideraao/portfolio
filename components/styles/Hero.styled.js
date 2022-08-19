@@ -523,7 +523,7 @@ export const StyledHero = styled.section`
       justify-content: space-evenly;
       margin-left: 0;
       z-index: 9999;
-      backdrop-filter: blur(21px);
+      backdrop-filter: blur(10px);
     }
 
     .mouse {

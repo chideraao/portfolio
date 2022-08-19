@@ -184,8 +184,8 @@ export const StyledProjects = styled.section`
     }
 
     & .image-container {
-      height: 40vh;
       width: 90vw;
+      height: 52vh;
     }
   }
 
@@ -202,9 +202,10 @@ export const StyledProjects = styled.section`
 
 export const SidebarStyled = styled.aside`
   z-index: 999999999999999;
+  height: 100%;
+  width: 100%;
 
   &.wrapper {
-    height: 100vh;
     width: 580px;
     position: fixed;
     top: 0;

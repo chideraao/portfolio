@@ -11,6 +11,8 @@ export const themes = {
     sidebarTech: "#e5dbdb",
     borderColor: "rgba(24, 100, 234, 0.5)",
     socialsBlur: "#f0eae06b",
+    success: "#45c34f",
+    successCard: "#fff",
   },
   dark: {
     background: "#020a13",
@@ -24,5 +26,7 @@ export const themes = {
     sidebarTech: "#2f4255",
     borderColor: "rgba(24, 126, 234, 0.5)",
     socialsBlur: "#0a1a2ccc",
+    success: "#1fb42b",
+    successCard: "#0c1825",
   },
 };
