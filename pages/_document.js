@@ -6,6 +6,11 @@ export default function Document() {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
         <meta name="theme-color" content="#020a13" />
         <meta property="og:title" content="Dera Okeke | Software Engineer" />
         <meta

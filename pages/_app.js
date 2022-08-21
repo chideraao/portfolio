@@ -9,14 +9,10 @@ function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      setTheme("dark");
-    } else {
+    if (localStorage.theme === "light" || !("theme" in localStorage)) {
       setTheme("light");
+    } else {
+      setTheme("dark");
     }
   }, []);
 

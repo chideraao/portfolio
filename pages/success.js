@@ -13,8 +13,7 @@ function Success() {
         <div className="success-content">
           <h1>Success!</h1>
           <p>
-            Your message has been sent successfully and I&apos;ll be in touch
-            soon.
+            Your message has been sent successfully. I&apos;ll be in touch soon!
           </p>
 
           <Link href="/">Back to Home</Link>

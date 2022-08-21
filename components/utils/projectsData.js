@@ -3,7 +3,7 @@ const PROJECTS_DATA = [
     title: "DheraGram",
     description: "A fully-functional, realtime chat application.",
     about:
-      "Piggment is curated collection of amazingly colored gradients for designers, developers and smart creators over the world. now you can generate, explore, save, easy CSS crossbrowser gradient codes all in one place.",
+      "This project is a real-time chat application built with ReactJS and Google's Firebase. In addition to a general group chat feature, the application also offers a private chat. The app utilizes the Realtime Database and Cloud Firestore to store and sync users' data.",
     link: "https://dhera-gram.web.app/",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/dhera-gram.appspot.com/o/Screen%20Recording%202022-07-30%20at%2013.46.38.gif?alt=media&token=9845ba57-d542-45bd-8182-3b32f6c90b8f",
@@ -14,7 +14,7 @@ const PROJECTS_DATA = [
     title: "Basecoin",
     description: "A semi-extensive clone of the Coinbase website.",
     about:
-      "Piggment is curated collection of amazingly colored gradients for designers, developers and smart creators over the world. now you can generate, explore, save, easy CSS crossbrowser gradient codes all in one place.",
+      "This project is a real-time chat application built with ReactJS and Google's Firebase. In addition to a general group chat feature, the application also offers a private chat. The app utilizes the Realtime Database and Cloud Firestore to store and sync users' data.",
     link: "https://friendly-ramanujan-2f68e3.netlify.app/",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/dhera-gram.appspot.com/o/Screen%20Recording%202022-07-01%20at%2016.07.31.gif?alt=media&token=2a7114a5-32f4-46b2-9abf-a631fefb0321",
@@ -24,9 +24,9 @@ const PROJECTS_DATA = [
   {
     title: "Visualization Playground",
     description:
-      "A small pet-project that visualizes data in a variety of ways.",
+      "A little pet-project that visualizes data in a variety of ways.",
     about:
-      "Piggment is curated collection of amazingly colored gradients for designers, developers and smart creators over the world. now you can generate, explore, save, easy CSS crossbrowser gradient codes all in one place.",
+      "This project is a real-time chat application built with ReactJS and Google's Firebase. In addition to a general group chat feature, the application also offers a private chat. The app utilizes the Realtime Database and Cloud Firestore to store and sync users' data.",
     link: "https://priceless-joliot-ead73b.netlify.app/",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/dhera-gram.appspot.com/o/Screen%20Recording%202022-07-04%20at%2021.55.15.gif?alt=media&token=c2080f17-85e7-4890-b064-c9d70aa37c35",
@@ -38,7 +38,7 @@ const PROJECTS_DATA = [
     description:
       "A simple news aggregator application that fetches news from various sources.",
     about:
-      "Piggment is curated collection of amazingly colored gradients for designers, developers and smart creators over the world. now you can generate, explore, save, easy CSS crossbrowser gradient codes all in one place.",
+      "This project is a real-time chat application built with ReactJS and Google's Firebase. In addition to a general group chat feature, the application also offers a private chat. The app utilizes the Realtime Database and Cloud Firestore to store and sync users' data.",
     link: "https://awesome-allen-6cf791.netlify.app/",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/dhera-gram.appspot.com/o/Screen%20Shot%202022-07-31%20at%2018.41.36.png?alt=media&token=9edc18f7-48fd-4171-9d4a-b986893c1a01",
@@ -52,7 +52,7 @@ const PROJECTS_DATA = [
     description:
       "A lightweight markdown previewer application that converts markdown to HTML.",
     about:
-      "Piggment is curated collection of amazingly colored gradients for designers, developers and smart creators over the world. now you can generate, explore, save, easy CSS crossbrowser gradient codes all in one place.",
+      "This project is a real-time chat application built with ReactJS and Google's Firebase. In addition to a general group chat feature, the application also offers a private chat. The app utilizes the Realtime Database and Cloud Firestore to store and sync users' data.",
     link: "https://angry-volhard-60f72f.netlify.app/",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/dhera-gram.appspot.com/o/Screen%20Shot%202022-07-31%20at%2018.42.22.png?alt=media&token=65b795f0-818b-4673-8d78-68d30ee59537",
@@ -66,7 +66,7 @@ const PROJECTS_DATA = [
     title: "Loruki",
     description: "A simple, lightweight website built with HTML and CSS.",
     about:
-      "Piggment is curated collection of amazingly colored gradients for designers, developers and smart creators over the world. now you can generate, explore, save, easy CSS crossbrowser gradient codes all in one place.",
+      "This project is a real-time chat application built with ReactJS and Google's Firebase. In addition to a general group chat feature, the application also offers a private chat. The app utilizes the Realtime Database and Cloud Firestore to store and sync users' data.",
     link: "https://nifty-lamport-29b0a2.netlify.app/",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/dhera-gram.appspot.com/o/Screen%20Shot%202022-07-04%20at%2022.17.23.png?alt=media&token=0f35c40f-f1b8-42e0-8fa3-d0e3f2d70bce",
