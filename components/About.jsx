@@ -15,8 +15,8 @@ function About({ pageRefs }) {
             <p>Hi there, I&apos;m Dera! 👋🏽 </p>
             <p>
               I am a Software Developer specializing in frontend technologies,
-              and I love to build accessible and interactive web experiences
-              with passion and excellence.
+              and I&apos;m passionate about building accessible and interactive
+              web experiences and visualizations.
             </p>
           </div>
         </div>
@@ -28,7 +28,7 @@ function About({ pageRefs }) {
               My goal as a Frontend Developer is to bring ideas to life by
               developing unique user-facing features that enhance the overall
               user experience. I possess outstanding knowledge of the latest
-              industry standards allowing me to deliver fast and reliable
+              industry standards, allowing me to deliver fast and reliable
               applications. Thus, striking a balance between functional and
               aesthetic design.
             </p>
