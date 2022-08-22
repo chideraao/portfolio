@@ -90,15 +90,7 @@ function Sidebar({ project }) {
                 </div>
                 <div className="sidebar-desc">
                   <h2>About</h2>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Beatae, iure tenetur pariatur cumque incidunt tempora nisi
-                    enim eius non totam perferendis, neque sit deserunt. Dicta
-                    quidem perspiciatis, voluptatibus quisquam sint natus at?
-                    Eligendi animi molestias quas quam neque possimus et,
-                    doloremque, delectus mollitia quibusdam amet temporibus
-                    perferendis porro laboriosam? Ipsam!
-                  </p>
+                  <p>{project.about}</p>
                   <h2>Technologies</h2>
                   <p>
                     {project.technologies.map((tech, index) => {

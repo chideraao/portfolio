@@ -26,7 +26,7 @@ export const StyledAbout = styled.section`
   }
 
   & .about-content {
-    height: 27%;
+    height: 28%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
@@ -55,6 +55,10 @@ export const StyledAbout = styled.section`
 
     & h3 {
       font-size: 2rem;
+    }
+
+    & .about-content {
+      gap: 4rem;
     }
   }
 

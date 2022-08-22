@@ -1,5 +1,4 @@
 import React from "react";
-import { SVGFill, SVGFill2, SVGFill3, SVGFill4, SVGFill5 } from "./icons";
 import { StyledAbout } from "./styles/About.styled";
 
 function About({ pageRefs }) {
@@ -13,12 +12,12 @@ function About({ pageRefs }) {
         <div className="about-content">
           <div className="about-main">
             <h2>About Me</h2>
+            <p>Hi there, I&apos;m Dera! 👋🏽 </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
-              corporis architecto? Labore, magni hic? Perferendis dignissimos
-              autem adipisci alias laborum.
+              I am a Software Developer specializing in frontend technologies,
+              and I love to build accessible and interactive web experiences
+              with passion and excellence.
             </p>
-            {/* <p>Hi, I&apos;m name, country. I code, I write and I teach.</p> */}
           </div>
         </div>
         <div className="about-content">
@@ -26,11 +25,12 @@ function About({ pageRefs }) {
           <div className="about-main">
             <h3>Engineering</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-              consequuntur distinctio et rerum velit consequatur, quisquam
-              placeat doloribus, recusandae eveniet voluptas voluptatibus porro
-              eius repudiandae? Nostrum quas hic ab nisi eius quis! Et, soluta
-              culpa.
+              My goal as a Frontend Developer is to bring ideas to life by
+              developing unique user-facing features that enhance the overall
+              user experience. I possess outstanding knowledge of the latest
+              industry standards allowing me to deliver fast and reliable
+              applications. Thus, striking a balance between functional and
+              aesthetic design.
             </p>
           </div>
         </div>
@@ -38,12 +38,12 @@ function About({ pageRefs }) {
           <div className="about-main">
             <h3>Others</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-              fuga quod, ex obcaecati ut inventore adipisci molestiae libero
-              ipsam officiis debitis repudiandae aspernatur optio culpa quos
-              eveniet eligendi alias soluta.
+              I am constantly learning, and working to become a better version
+              of myself. Adept at technical writing, I have authored multiple
+              articles on frontend practices and data visualization and recently
+              released a Firebase course on Educative, Inc. I love teaching
+              concepts, writing API documentation, tutorials, and how-to guides.
             </p>
-            {/* <p>Exploring devrel; simplifying concepts for devs (readme)</p> */}
           </div>
         </div>
       </div>

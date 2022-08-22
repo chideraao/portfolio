@@ -5,7 +5,10 @@ function Layout({ children, theme }) {
   return (
     <>
       <Head>
-        <meta name="theme-color" content={theme.background} />
+        <meta
+          name="theme-color"
+          content={theme === "light" ? "#fffafc" : "#020a13"}
+        />
       </Head>
       <div className="skip-main">
         <a className="skip-main" href="#main">

@@ -12,7 +12,7 @@ export default function Document() {
           href="/apple-touch-icon.png"
         />
         <meta name="theme-color" content="#020a13" />
-        <meta property="og:title" content="Dera Okeke | Software Engineer" />
+        <meta property="og:title" content="Dera Okeke" />
         <meta
           property="og:description"
           content="Dera Okeke, Software engineer, Frontend developer, Technical writer, in that order. Probably figuring things out somewhere."
@@ -30,7 +30,7 @@ export default function Document() {
         />
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Dera Okeke | Software Engineer" />
+        <meta name="twitter:title" content="Dera Okeke" />
         <meta name="twitter:creator" content="@chideraa_o" />
         <meta
           name="twitter:description"
