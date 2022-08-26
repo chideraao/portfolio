@@ -87,18 +87,30 @@ function Header({ theme, setTheme }) {
               <div className="navbar-main">
                 <ul className="navbar-links">
                   <li>
-                    <a href="#about" aria-label="Go to about section">
+                    <a
+                      className="from-top"
+                      href="#about"
+                      aria-label="Go to about section"
+                    >
                       <span>01.</span> About
                     </a>
                   </li>
                   <li>
-                    <a href="#projects" aria-label="Go to projects section">
+                    <a
+                      className="from-top"
+                      href="#projects"
+                      aria-label="Go to projects section"
+                    >
                       {" "}
                       <span>02.</span>Projects
                     </a>
                   </li>
                   <li>
-                    <a href="#contact" aria-label="Go to contact section">
+                    <a
+                      className="from-top"
+                      href="#contact"
+                      aria-label="Go to contact section"
+                    >
                       {" "}
                       <span>03.</span> Contact
                     </a>
@@ -111,7 +123,7 @@ function Header({ theme, setTheme }) {
                       if (e.key === "Enter") return changeTheme();
                     }}
                   >
-                    <span className="navbar-svg">
+                    <span className="navbar-svg from-top">
                       <Moon />
                     </span>
                   </li>

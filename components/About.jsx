@@ -15,8 +15,8 @@ function About({ pageRefs }) {
             <p>Hi there, I&apos;m Dera! 👋🏽 </p>
             <p>
               I am a Software Developer specializing in frontend technologies,
-              and I&apos;m passionate about building accessible and interactive
-              web experiences and visualizations.
+              and passionate about building accessible and interactive web
+              experiences and visualizations.
             </p>
           </div>
         </div>
@@ -29,8 +29,7 @@ function About({ pageRefs }) {
               developing unique user-facing features that enhance the overall
               user experience. I possess outstanding knowledge of the latest
               industry standards, allowing me to deliver fast and reliable
-              applications. Thus, striking a balance between functional and
-              aesthetic design.
+              applications while optimizing performance.
             </p>
           </div>
         </div>
@@ -38,11 +37,12 @@ function About({ pageRefs }) {
           <div className="about-main">
             <h3>Others</h3>
             <p>
-              I am constantly learning, and working to become a better version
-              of myself. Adept at technical writing, I have authored multiple
-              articles on frontend practices and data visualization and recently
-              released a Firebase course on Educative, Inc. I love teaching
-              concepts, writing API documentation, tutorials, and how-to guides.
+              I am constantly learning and working to become a better version of
+              myself. Adept at technical writing, I have authored multiple
+              articles on frontend practices and data visualization; and
+              recently released a Firebase course on Educative, Inc. I love
+              teaching concepts and writing API documentation, tutorials, and
+              how-to guides.
             </p>
           </div>
         </div>

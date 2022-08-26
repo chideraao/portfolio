@@ -101,7 +101,12 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    /* opacity: 0; */
+    opacity: 0;
+  }
+
+  .loading > div{
+    height: 100vh;
+    width: 100vw
   }
 
   a.skip-main {

@@ -1,9 +1,9 @@
 import gsap, { Power3, Power4 } from "gsap";
-import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 import About from "./About";
 import Contact from "./Contact";
 import Hero from "./Hero";
+import Loading from "./Loading";
 import Projects from "./Projects";
 
 function Main({ theme, setTheme }) {
@@ -50,7 +50,6 @@ function Main({ theme, setTheme }) {
 
   return (
     <>
-      {" "}
       {/* <div className="load-container">
         <div
           className="load-screen1"
@@ -58,16 +57,12 @@ function Main({ theme, setTheme }) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            backgroundColor: "#fffafc",
           }}
           ref={(el) => (screen = el)}
         >
-          <Image
-            src="/icons/loading-light.gif"
-            alt="loading animation"
-            layout="fill"
-          />
-          <h1>Precious</h1>
-        </div>
+      <Loading />
+      </div>
       </div> */}
       <main
         className="main"

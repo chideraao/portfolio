@@ -178,8 +178,7 @@ export const StyledContact = styled.section`
     }
 
     & div.socials svg {
-      fill: ${({ theme }) =>
-        theme.background === "#fffdfc" ? "#545454" : "var(--text)"};
+      fill: var(--text);
       height: 1.4rem;
       width: 1.5rem;
       transform: translate3d(0px, 0px, 1px) scale(1, 1);

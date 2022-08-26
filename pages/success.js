@@ -8,7 +8,7 @@ function Success() {
   return (
     <>
       <Head>
-        <title>Dera Okeke - Success</title>
+        <title>Success - Dera Okeke</title>
       </Head>
       <StyledSuccess>
         <div className="success-main">
