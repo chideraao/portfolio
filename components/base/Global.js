@@ -101,13 +101,13 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    opacity: 0;
+    /* opacity: 0; */
   }
 
-  .loading > div{
+  /* .loading > div{
     height: 100vh;
     width: 100vw
-  }
+  } */
 
   a.skip-main {
     left: -999px;
@@ -175,6 +175,15 @@ const GlobalStyles = createGlobalStyle`
     background-color: #fff;
     width: 100%;
     height: 0%;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    * {
+      animation: none !important;
+      transition: none !important;
+      opacity: 1 !important;
+      scroll-snap-align: none !important;
+    }
   }
 
   @media (max-width: 1200px) {

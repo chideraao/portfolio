@@ -45,6 +45,33 @@ export const StyledHeader = styled.header`
     font-size: 0.9rem;
   }
 
+  & .navbar-links .from-top {
+    position: relative;
+    animation: fromtop 0.7s ease-in-out;
+  }
+
+  & .navbar-links a[href="#projects"] {
+    animation-duration: 1s;
+  }
+
+  & .navbar-links a[href="#contact"] {
+    animation-duration: 1.5s;
+  }
+
+  & .navbar-links .navbar-svg.from-top {
+    animation-duration: 1.7s;
+  }
+
+  @keyframes fromtop {
+    0% {
+      top: -100px;
+    }
+
+    100% {
+      top: 0;
+    }
+  }
+
   & .navbar-links li span {
     color: var(--primary);
     margin-right: 0.2rem;

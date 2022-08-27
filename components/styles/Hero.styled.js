@@ -16,6 +16,52 @@ export const StyledHero = styled.section`
     margin-bottom: 2.5rem;
   }
 
+  & .fadeInBottom {
+    position: relative;
+    animation: fadeInBottom 0.5s ease 1.7s forwards;
+    opacity: 0;
+  }
+
+  & .fadeInBottom.big-name {
+    animation-duration: 1s;
+  }
+
+  & .fadeInBottom.hero-paragraph {
+    animation-duration: 1.3s;
+  }
+
+  & .fadeInBottom.call-to-action {
+    animation-duration: 1.6s;
+  }
+
+  & .fadeInBottom.socials {
+    animation-duration: 2s;
+  }
+
+  & .fadeInBottom.mouse_scroll {
+    animation-duration: 2.5s;
+  }
+
+  @keyframes fadeInBottom {
+    0% {
+      bottom: -20px;
+      opacity: 0.3;
+    }
+
+    25% {
+      opacity: 0.5;
+    }
+
+    75% {
+      opacity: 0.75;
+    }
+
+    100% {
+      bottom: 0px;
+      opacity: 1;
+    }
+  }
+
   & #intro-paragraph {
     color: var(--primary);
     font-size: clamp(1rem, 2.7vw - 0.2rem, 1.5rem);
@@ -422,6 +468,21 @@ export const StyledHero = styled.section`
   /* ----------------------------------------------------------------------------------------------------------------------------------------------/
   /                                                               MEDIA QUERIES                                                                   /
   /---------------------------------------------------------------------------------------------------------------------------------------------*/
+  @media (prefers-reduced-motion: reduce) {
+    .intro-name {
+      &::before {
+        animation: none;
+        text-shadow: none;
+        left: 0;
+      }
+
+      &::after {
+        animation: none;
+        text-shadow: none;
+        left: 0;
+      }
+    }
+  }
 
   @media (max-width: 1200px) {
     .container & {
@@ -456,6 +517,10 @@ export const StyledHero = styled.section`
       margin-left: 6rem;
       margin-bottom: 0;
       position: relative;
+    }
+
+    & .fadeInBottom {
+      animation-delay: 0.7s;
     }
 
     & #intro-paragraph {

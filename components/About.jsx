@@ -15,8 +15,8 @@ function About({ pageRefs }) {
             <p>Hi there, I&apos;m Dera! 👋🏽 </p>
             <p>
               I am a Software Developer specializing in frontend technologies,
-              and passionate about building accessible and interactive web
-              experiences and visualizations.
+              and skilled at building accessible and interactive web experiences
+              and visualizations.
             </p>
           </div>
         </div>

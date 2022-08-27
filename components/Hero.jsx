@@ -17,14 +17,16 @@ function Hero({ theme, setTheme, pageRefs, active }) {
         <StyledHero>
           <div className="hero-content">
             <article>
-              <p id="intro-paragraph">Hello! My name is</p>
-              <div className="big-name">
+              <p id="intro-paragraph" className="fadeInBottom">
+                Hello! My name is
+              </p>
+              <div className="big-name fadeInBottom">
                 <h1 className="intro-name" data-text="Dera Okeke">
                   Dera Okeke
                 </h1>
               </div>
 
-              <div className="hero-paragraph">
+              <div className="hero-paragraph fadeInBottom">
                 <p>
                   Frontend-focused software engineer and technical writer
                   building accessible web products with great user experiences.
@@ -36,12 +38,12 @@ function Hero({ theme, setTheme, pageRefs, active }) {
               href="mailto:okekechidera97@gmail.com"
               target="_blank"
               rel="noreferrer"
-              className="call-to-action"
+              className="call-to-action fadeInBottom"
               aria-label="Send Dera Okeke an email"
             >
               Let&apos;s talk. 🤺
             </a>
-            <div className="socials">
+            <div className="socials fadeInBottom">
               <a
                 href="https://github.com/chideraao"
                 target="_blank"

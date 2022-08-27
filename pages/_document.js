@@ -12,30 +12,38 @@ export default function Document() {
           href="/apple-touch-icon.png"
         />
         <meta name="theme-color" content="#020a13" />
+        <meta name="title" content="Dera Okeke" />
+        <meta
+          name="description"
+          content="Dera Okeke, Software engineer, Frontend Developer, Technical Writer. Skilled at building accessible and interactive web experiences and visualizations."
+        />
+        <meta
+          name="keyword"
+          content="Dera Okeke, portfolio, javascript, developer, Software, engineer, frontend, front-end, react, data visualizations, technical writing, developer relations, devrel, developer advocate, chart.js"
+        />
+
         <meta property="og:title" content="Dera Okeke" />
         <meta
           property="og:description"
-          content="Dera Okeke, Software engineer, Frontend developer, Technical writer, in that order. Probably figuring things out somewhere."
+          content="Dera Okeke, Software engineer, Frontend Developer, Technical Writer. Skilled at building accessible and interactive web experiences and visualizations."
         />
         <meta property="og:url" content="https://dhera.dev" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://dhera.dev/img/dhera.png" />
-        <meta
-          name="description"
-          content="Human, Dera Okeke, Software engineer, Frontend developer, Technical writer, in that order. Probably figuring things out somewhere."
-        />
-        <meta
-          name="keyword"
-          content="Dera Okeke, portfolio, javascript, developer, Software, engineer, frontend, front-end, react, data visualization, technical writing, developer relations, devrel, developer advocate, chart.js"
-        />
 
         <meta name="twitter:card" content="summary" />
+        <meta property="twitter:url" content="https://dhera.dev" />
         <meta name="twitter:title" content="Dera Okeke" />
         <meta name="twitter:creator" content="@chideraa_o" />
         <meta
           name="twitter:description"
-          content="Human, Dera Okeke, Software engineer, Frontend developer, Technical writer, in that order. Probably figuring things out somewhere."
+          content="Dera Okeke, Software engineer, Frontend Developer, Technical Writer. Skilled at building accessible and interactive web experiences and visualizations."
         />
+        <meta
+          property="twitter:image"
+          content="https://dhera.dev/img/dhera.png"
+        />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
