@@ -1,13 +1,13 @@
 import Image from "next/image";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Sidebar from "./Sidebar";
 import { StyledProjects } from "./styles/Projects.styled";
-import { SidebarContext } from "./utils/Context";
+import { IndexContext, SidebarContext } from "./utils/Context";
 import ProjectsData from "./utils/projectsData";
 
 function Projects({ pageRefs }) {
   const [show, setShow] = useContext(SidebarContext);
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useContext(IndexContext);
 
   const handleClick = (id) => {
     setShow(true);
@@ -65,7 +65,6 @@ function Projects({ pageRefs }) {
           </div>
         </div>
       </StyledProjects>
-      {show ? <Sidebar project={ProjectsData[index]} /> : ""}
     </>
   );
 }

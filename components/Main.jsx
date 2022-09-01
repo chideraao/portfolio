@@ -1,14 +1,22 @@
 import gsap, { Power3, Power4 } from "gsap";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useContext } from "react";
 import About from "./About";
 import Contact from "./Contact";
 import Hero from "./Hero";
+import { useMediaQuery } from "./hooks/UseMediaQuery";
+import { Codepen, Dev, Github, LinkedIn, Twitter } from "./icons";
 import Loading from "./Loading";
 import Projects from "./Projects";
+import Sidebar from "./Sidebar";
+import { IndexContext, SidebarContext } from "./utils/Context";
+import ProjectsData from "./utils/projectsData";
 
 function Main({ theme, setTheme }) {
   const pageRefs = useRef([]);
   const [active, setActive] = useState(0);
+  const [show, setShow] = useContext(SidebarContext);
+  const [index, setIndex] = useContext(IndexContext);
+  let isMobile = useMediaQuery("(max-width: 470px)");
 
   let screen = useRef(null);
   let body = useRef(null);
@@ -66,8 +74,12 @@ function Main({ theme, setTheme }) {
       </div> */}
       <main
         className="main"
-        style={{ position: "relative" }}
         ref={(el) => (body = el)}
+        style={
+          show
+            ? { pointerEvents: "none", position: "relative" }
+            : { position: "relative" }
+        }
       >
         <Hero
           theme={theme}
@@ -79,6 +91,53 @@ function Main({ theme, setTheme }) {
         <Projects pageRefs={pageRefs} />
         <Contact pageRefs={pageRefs} />
       </main>
+      {show ? <Sidebar project={ProjectsData[index]} /> : ""}
+      {isMobile ? (
+        <div className="socials fadeInBottom">
+          <a
+            href="https://github.com/chideraao"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Go to Dera Okeke's Github"
+          >
+            <Github />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/dera-okeke-295718178/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Go to Dera Okeke's LinkedIn"
+          >
+            <LinkedIn />
+          </a>
+          <a
+            href="https://dev.to/chideraao"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Go to Dera Okeke's Dev.to"
+          >
+            <Dev />
+          </a>
+          <a
+            href="https://codepen.io/chideraao"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Go to Dera Okeke's Codepen"
+          >
+            <Codepen />
+          </a>
+          <a
+            href="https://twitter.com/Chideraa_O"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Go to Dera Okeke's Twitter"
+          >
+            <Twitter />
+          </a>
+        </div>
+      ) : (
+        ""
+      )}
     </>
   );
 }

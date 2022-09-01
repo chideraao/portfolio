@@ -5,6 +5,7 @@ export const StyledHero = styled.section`
   max-height: 75vh;
   margin: 3rem;
   margin-bottom: 0;
+  position: relative;
 
   & p {
     max-width: 700px;
@@ -469,6 +470,10 @@ export const StyledHero = styled.section`
   /                                                               MEDIA QUERIES                                                                   /
   /---------------------------------------------------------------------------------------------------------------------------------------------*/
   @media (prefers-reduced-motion: reduce) {
+    & .fadeInBottom {
+      opacity: 1 !important;
+    }
+
     .intro-name {
       &::before {
         animation: none;
@@ -578,16 +583,11 @@ export const StyledHero = styled.section`
     }
 
     & div.socials {
-      position: fixed;
-      height: 3.5rem;
-      width: 100%;
-      background-color: var(--socials-blur);
-      bottom: 0;
-      gap: 2rem;
-      justify-content: space-evenly;
-      margin-left: 0;
-      z-index: 9999;
-      backdrop-filter: blur(10px);
+      display: none;
+    }
+
+    & .fadeInBottom.socials {
+      animation-duration: 0s;
     }
 
     .mouse {

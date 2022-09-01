@@ -203,7 +203,9 @@ export const StyledProjects = styled.section`
 export const SidebarStyled = styled.aside`
   z-index: 999999999999999;
   height: 100%;
+  overflow-y: scroll;
   width: 100%;
+  pointer-events: auto !important;
 
   &.wrapper {
     width: 580px;
@@ -325,6 +327,8 @@ export const SidebarStyled = styled.aside`
         align-items: flex-start;
         justify-content: flex-start;
         gap: 0.25rem;
+        color: var(--text);
+        padding-bottom: 0;
       }
 
       & a {

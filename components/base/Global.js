@@ -94,14 +94,10 @@ const GlobalStyles = createGlobalStyle`
   .fullpage {
     height: 100vh;
     width: 100vw;
-    scroll-snap-align: start;
   }
 
   .main {
     height: 100vh;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    /* opacity: 0; */
   }
 
   /* .loading > div{
@@ -140,6 +136,7 @@ const GlobalStyles = createGlobalStyle`
   .overlay {
     z-index: 9;
     position: fixed;
+    pointer-events:none;
     height: 100%;
     width: 100%;
     top: 0;
@@ -181,7 +178,6 @@ const GlobalStyles = createGlobalStyle`
     * {
       animation: none !important;
       transition: none !important;
-      opacity: 1 !important;
       scroll-snap-align: none !important;
     }
   }
@@ -215,6 +211,35 @@ const GlobalStyles = createGlobalStyle`
     .container {
       padding: 0;
     }
+
+    & div.socials{
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+      position: fixed;
+      height: 3.5rem;
+      width: 100%;
+      background-color: var(--socials-blur);
+      bottom: 0;
+      gap: 2rem;
+      justify-content: space-evenly;
+      margin-left: 0;
+      z-index: 9999;
+      backdrop-filter: blur(10px);
+    }
+
+    & div.socials svg {
+    fill: var(--text);
+    height: 1.4rem;
+    width: 1.5rem;
+    transform: translate3d(0px, 0px, 1px) scale(1, 1);
+  }
+
+  & div.socials a:hover svg {
+    fill: var(--primary);
+    transform: translate3d(0px, 0px, 1px) scale(1.1, 1.1);
+    transition: all 0.5s ease;
+  }
   }
 `;
 
