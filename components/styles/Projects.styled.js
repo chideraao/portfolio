@@ -170,7 +170,7 @@ export const StyledProjects = styled.section`
 
     & .image-container {
       height: 50vh;
-      width: 75vh;
+      width: 80vw;
     }
   }
 

@@ -177,6 +177,10 @@ export const StyledContact = styled.section`
       margin-top: 1rem;
     }
 
+    & div.socials a {
+      padding: 0.2rem;
+    }
+
     & div.socials svg {
       fill: var(--text);
       height: 1.4rem;

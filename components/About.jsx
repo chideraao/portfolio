@@ -9,7 +9,7 @@ function About({ pageRefs }) {
       ref={(el) => pageRefs.current.push(el)}
     >
       <div className="container">
-        <div className="about-content">
+        <div className="about-content reveal">
           <div className="about-main">
             <h2>About Me</h2>
             <p>Hi there, I&apos;m Dera! 👋🏽 </p>
@@ -20,7 +20,7 @@ function About({ pageRefs }) {
             </p>
           </div>
         </div>
-        <div className="about-content">
+        <div className="about-content reveal">
           <div></div>
           <div className="about-main">
             <h3>Engineering</h3>
@@ -33,7 +33,7 @@ function About({ pageRefs }) {
             </p>
           </div>
         </div>
-        <div className="about-content">
+        <div className="about-content reveal">
           <div className="about-main">
             <h3>Others</h3>
             <p>

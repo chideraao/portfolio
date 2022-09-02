@@ -87,14 +87,7 @@ function Hero({ theme, setTheme, pageRefs, active }) {
             </div>
           </div>
           {active <= 2 ? (
-            <div
-              className="mouse_scroll"
-              onClick={scrollToSection}
-              tabIndex="0"
-              onKeyDown={(e) => {
-                if (e.key === "Enter") return scrollToSection();
-              }}
-            >
+            <div className="mouse_scroll" onClick={scrollToSection}>
               <div className="mouse">
                 <div className="wheel"></div>
               </div>

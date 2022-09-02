@@ -9,7 +9,7 @@ function Contact({ pageRefs }) {
       className="fullpage"
       ref={(el) => pageRefs.current.push(el)}
     >
-      <div className="container">
+      <div className="container reveal">
         <div className="contacts-content">
           <h2>Get in touch!</h2>
           <p>

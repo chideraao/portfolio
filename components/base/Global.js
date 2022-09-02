@@ -174,6 +174,18 @@ const GlobalStyles = createGlobalStyle`
     height: 0%;
   }
 
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+  }
+
+  .reveal.fadeInUp{
+    transform: translateY(0px);
+    opacity:1;
+  }
+
   @media (prefers-reduced-motion: reduce){
     * {
       animation: none !important;

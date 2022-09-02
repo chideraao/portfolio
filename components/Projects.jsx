@@ -31,7 +31,7 @@ function Projects({ pageRefs }) {
                 return (
                   <div
                     key={idx}
-                    className="project-item"
+                    className="project-item reveal"
                     tabIndex="0"
                     onClick={() => handleClick(idx)}
                     onKeyDown={(e) => {
