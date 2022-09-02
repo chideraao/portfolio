@@ -35,13 +35,13 @@ function Hero({ theme, setTheme, pageRefs, active }) {
               </div>
             </article>
             <a
-              href="mailto:okekechidera97@gmail.com"
+              href="https://www.educative.io/courses/complete-guide-firebase-web"
               target="_blank"
               rel="noreferrer"
               className="call-to-action fadeInBottom"
-              aria-label="Send Dera Okeke an email"
+              aria-label="Check out Dera Okeke's course on Educative"
             >
-              Let&apos;s talk. 🤺
+              Check out my course!
             </a>
             <div className="socials fadeInBottom">
               <a

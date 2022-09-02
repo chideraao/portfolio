@@ -78,7 +78,7 @@ export const StyledHero = styled.section`
     border: 1px solid var(--primary);
     cursor: pointer;
     border-radius: 5px;
-    padding: 0.7rem 1.5rem;
+    padding: 1.1rem 1.7rem;
     margin-bottom: 2rem;
   }
 
@@ -279,7 +279,7 @@ export const StyledHero = styled.section`
     width: 2.2rem;
     height: 72px;
     position: absolute;
-    left: 87%;
+    left: 105%;
     margin-left: -12px;
     bottom: 7%;
     cursor: pointer;
@@ -542,6 +542,7 @@ export const StyledHero = styled.section`
     }
 
     & a.call-to-action {
+      margin-top: 0.3rem;
       margin-bottom: 1.3rem;
     }
 
@@ -579,6 +580,7 @@ export const StyledHero = styled.section`
     }
 
     & a.call-to-action {
+      margin-top: 0.5rem;
       margin-left: 3rem;
     }
 

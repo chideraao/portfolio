@@ -215,7 +215,12 @@ const GlobalStyles = createGlobalStyle`
 
     .fullpage {
       height: 100%;
-      scroll-snap-align: none;
+    }
+
+    .reveal{
+      position: relative;
+      transform: translateY(0px);
+      opacity: 1;
     }
   }
 
