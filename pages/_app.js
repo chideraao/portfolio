@@ -17,15 +17,15 @@ function MyApp({ Component, pageProps }) {
     scrollbar.addListener(() => {
       const reveals = document.querySelectorAll(".reveal");
 
-      for (var i = 0; i < reveals.length; i++) {
+      reveals.forEach((reveal) => {
         const windowHeight = window.innerHeight;
-        const revealTop = reveals[i].getBoundingClientRect().top;
+        const revealTop = reveal.getBoundingClientRect().top;
         const revealPoint = 70;
 
         if (revealTop < windowHeight - revealPoint) {
-          reveals[i].classList.add("fadeInUp");
+          reveal.classList.add("fadeInUp");
         }
-      }
+      });
     });
 
     if (localStorage.theme === "light" || !("theme" in localStorage)) {
