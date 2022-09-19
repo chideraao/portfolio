@@ -144,6 +144,10 @@ export const StyledHeader = styled.header`
       z-index: 9999999999;
     }
 
+    & .navbar-main .navbar-links {
+      display: none;
+    }
+
     .navbar-menu svg {
       fill: var(--primary);
       cursor: pointer;
