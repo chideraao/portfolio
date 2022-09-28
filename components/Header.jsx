@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useMediaQuery } from "./hooks/UseMediaQuery";
 import { StyledHeader } from "./styles/Header.styled";
 import { Menu, Moon } from "./icons";
 import MenuSidebar from "./MenuSidebar";
+import Scrollbar from "smooth-scrollbar";
 
 function Header({ theme, setTheme }) {
   const [menuClick, setMenuClick] = useState(false);
+  const dummyRef = useRef();
+  const [scrollbar, setScrollbar] = useState(dummyRef.current);
   let isMobile = useMediaQuery("(max-width: 870px)");
 
   const changeTheme = () => {
@@ -27,10 +30,41 @@ function Header({ theme, setTheme }) {
     }, 1000);
   };
 
+  useEffect(() => {
+    setScrollbar(
+      Scrollbar.init(document.querySelector(".main"), {
+        damping: 0.06,
+      })
+    );
+
+    scrollbar?.addListener(() => {
+      const reveals = document.querySelectorAll(".reveal");
+
+      reveals.forEach((reveal) => {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveal.getBoundingClientRect().top;
+        const revealPoint = 70;
+
+        if (revealTop < windowHeight - revealPoint) {
+          reveal.classList.add("fadeInUp");
+        }
+      });
+    });
+  }, [scrollbar]);
+
+  const handleClick = (anchor) => {
+    scrollbar.scrollIntoView(document.querySelector(anchor), {
+      offsetLeft: 34,
+      offsetBottom: 12,
+      alignToTop: false,
+      onlyScrollIfNeeded: true,
+    });
+  };
+
   return (
     <StyledHeader>
       <nav id="nav">
-        <div className="navbar container">
+        <div className="navbar container" ref={dummyRef}>
           {isMobile && (
             <>
               <Link href="/" aria-label="Dera Okeke home">
@@ -91,6 +125,7 @@ function Header({ theme, setTheme }) {
                       className="from-top"
                       href="#about"
                       aria-label="Go to about section"
+                      onClick={() => handleClick("#about")}
                     >
                       <span>01.</span> About
                     </a>
@@ -100,6 +135,7 @@ function Header({ theme, setTheme }) {
                       className="from-top"
                       href="#projects"
                       aria-label="Go to projects section"
+                      onClick={() => handleClick("#projects")}
                     >
                       {" "}
                       <span>02.</span>Projects
@@ -110,6 +146,7 @@ function Header({ theme, setTheme }) {
                       className="from-top"
                       href="#contact"
                       aria-label="Go to contact section"
+                      onClick={() => handleClick("#contact")}
                     >
                       {" "}
                       <span>03.</span> Contact
