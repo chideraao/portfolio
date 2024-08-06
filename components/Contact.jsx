@@ -98,7 +98,7 @@ function Contact({ pageRefs }) {
               <Github />
             </a>
             <a
-              href="https://www.linkedin.com/in/dera-okeke-295718178/"
+              href="https://www.linkedin.com/in/dera-okeke/"
               target="_blank"
               rel="noreferrer"
               aria-label="Go to Dera Okeke's LinkedIn"
