@@ -121,14 +121,14 @@ function Contact({ pageRefs }) {
             >
               <Codepen />
             </a>
-            <a
+            {/* <a
               href="https://twitter.com/Chideraa_O"
               target="_blank"
               rel="noreferrer"
               aria-label="Go to Dera Okeke's Twitter"
             >
               <Twitter />
-            </a>
+            </a> */}
           </div>
         </div>
       </footer>

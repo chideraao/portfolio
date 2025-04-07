@@ -28,9 +28,10 @@ function Hero({ theme, setTheme, pageRefs, active }) {
 
               <div className="hero-paragraph fadeInBottom">
                 <p>
-                  Frontend-focused software engineer and technical writer
-                  building accessible web products with great user experiences.
-                  I enjoy teaching concepts and documenting developer guides.
+                  Software engineer and technical writer specializing in turning
+                  complex technical ideas into clear, understandable content. I
+                  enjoy teaching concepts and breaking them down into practical,
+                  real-world examples.
                 </p>
               </div>
             </article>

@@ -58,6 +58,17 @@ function MenuSidebar({ theme, setTheme, menuClick, setMenuClick }) {
                 <span>03.</span> Contact
               </a>
             </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://blog.dhera.dev/"
+                aria-label="Go to Dera's blog"
+              >
+                {" "}
+                <span>04.</span> Blog
+              </a>
+            </li>
           </ul>
         </div>
       </StyledMenu>

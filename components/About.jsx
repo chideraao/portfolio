@@ -14,9 +14,9 @@ function About({ pageRefs }) {
             <h2>About Me</h2>
             <p>Hi there, I&apos;m Dera! 👋🏽 </p>
             <p>
-              I am a Software Developer specializing in frontend technologies,
-              and skilled at building accessible and interactive web experiences
-              and visualizations.
+              I&apos;m a seasoned technical writer and documentation engineer
+              specializing in creating technical content for developers,
+              including tutorials, courses and documentation.
             </p>
           </div>
         </div>
@@ -25,11 +25,14 @@ function About({ pageRefs }) {
           <div className="about-main">
             <h3>Engineering</h3>
             <p>
-              My goal as a Frontend Developer is to bring ideas to life by
-              developing unique user-facing features that enhance the overall
-              user experience. I possess outstanding knowledge of the latest
-              industry standards, allowing me to deliver fast and reliable
-              applications while optimizing performance.
+              My background as a software engineer gives me a strong foundation
+              for understanding and breaking down complex concepts.
+            </p>
+            <p>
+              This also allows me to implement improvements to documentation
+              tooling, such as developing linting pipelines and optimizing
+              documentation infrastructure to ensure a smoother, more reliable
+              user experience.
             </p>
           </div>
         </div>
@@ -37,12 +40,15 @@ function About({ pageRefs }) {
           <div className="about-main">
             <h3>Others</h3>
             <p>
-              I am constantly learning and working to become a better version of
-              myself. Adept at technical writing, I have authored multiple
-              articles on frontend practices and data visualization; and
-              recently released a Firebase course on Educative, Inc. I love
-              teaching concepts and writing API documentation, tutorials, and
-              how-to guides.
+              I possess outstanding knowledge of the latest industry standards,
+              along with a deep understanding of best practices in software
+              development, documentation, and user-centered design.
+            </p>
+            <p>
+              Adept at technical writing, I write straightforward docs,
+              tutorials, and developer-focused guides that help people actually
+              get things done. I enjoy teaching concepts and writing API
+              documentation, tutorials, and how-to guides.
             </p>
           </div>
         </div>
