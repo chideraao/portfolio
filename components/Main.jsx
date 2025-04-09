@@ -3,6 +3,7 @@ import { useRef, useEffect, useState, useContext } from "react";
 import About from "./About";
 import Contact from "./Contact";
 import Hero from "./Hero";
+import Articles from "./Articles";
 import { useMediaQuery } from "./hooks/UseMediaQuery";
 import { Codepen, Dev, Github, LinkedIn, Twitter } from "./icons";
 import Loading from "./Loading";
@@ -89,6 +90,7 @@ function Main({ theme, setTheme }) {
         />
         <About pageRefs={pageRefs} />
         <Projects pageRefs={pageRefs} />
+        <Articles pageRefs={pageRefs} />
         <Contact pageRefs={pageRefs} />
       </main>
       {show ? <Sidebar project={ProjectsData[index]} /> : ""}

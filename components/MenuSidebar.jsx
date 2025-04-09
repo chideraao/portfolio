@@ -53,20 +53,15 @@ function MenuSidebar({ theme, setTheme, menuClick, setMenuClick }) {
               </a>
             </li>
             <li onClick={() => setMenuClick(!menuClick)}>
-              <a href="#contact" aria-label="Go to contact section">
+              <a href="#articles" aria-label="Go to articles section">
                 {" "}
-                <span>03.</span> Contact
+                <span>03.</span> Articles
               </a>
             </li>
-            <li>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://blog.dhera.dev/"
-                aria-label="Go to Dera's blog"
-              >
+            <li onClick={() => setMenuClick(!menuClick)}>
+              <a href="#contact" aria-label="Go to contact section">
                 {" "}
-                <span>04.</span> Blog
+                <span>04.</span> Contact
               </a>
             </li>
           </ul>

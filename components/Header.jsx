@@ -144,24 +144,23 @@ function Header({ theme, setTheme }) {
                   <li>
                     <a
                       className="from-top"
-                      href="#contact"
-                      aria-label="Go to contact section"
-                      onClick={() => handleClick("#contact")}
+                      href="#articles"
+                      aria-label="Go to articles section"
+                      onClick={() => handleClick("#articles")}
                     >
                       {" "}
-                      <span>03.</span> Contact
+                      <span>03.</span> Articles
                     </a>
                   </li>
                   <li>
                     <a
                       className="from-top"
-                      target="_blank"
-                      rel="noreferrer"
-                      href="https://blog.dhera.dev/"
-                      aria-label="Go to Dera's blog"
+                      href="#contact"
+                      aria-label="Go to contact section"
+                      onClick={() => handleClick("#contact")}
                     >
                       {" "}
-                      <span>04.</span> Blog
+                      <span>04.</span> Contact
                     </a>
                   </li>
                   <li
