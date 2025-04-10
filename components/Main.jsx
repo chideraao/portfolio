@@ -12,7 +12,7 @@ import Sidebar from "./Sidebar";
 import { IndexContext, SidebarContext } from "./utils/Context";
 import ProjectsData from "./utils/projectsData";
 
-function Main({ theme, setTheme }) {
+function Main({ theme, setTheme, posts }) {
   const pageRefs = useRef([]);
   const [active, setActive] = useState(0);
   const [show, setShow] = useContext(SidebarContext);
@@ -90,7 +90,7 @@ function Main({ theme, setTheme }) {
         />
         <About pageRefs={pageRefs} />
         <Projects pageRefs={pageRefs} />
-        <Articles pageRefs={pageRefs} />
+        <Articles pageRefs={pageRefs} posts={posts} />
         <Contact pageRefs={pageRefs} />
       </main>
       {show ? <Sidebar project={ProjectsData[index]} /> : ""}

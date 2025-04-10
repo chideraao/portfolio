@@ -1,7 +1,8 @@
 import React from "react";
 import { StyledArticles } from "./styles/Articles.styled";
 
-export default function Articles() {
+export default function Articles({ posts }) {
+  console.log(posts);
   return (
     <StyledArticles
       id="articles"
