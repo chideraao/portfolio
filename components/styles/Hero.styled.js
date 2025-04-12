@@ -80,6 +80,7 @@ export const StyledHero = styled.section`
     border-radius: 5px;
     padding: 1.1rem 1.7rem;
     margin-bottom: 2rem;
+    transition: 2s;
   }
 
   a.call-to-action:hover,
@@ -103,6 +104,7 @@ export const StyledHero = styled.section`
     height: 1.4rem;
     width: 1.5rem;
     transform: translate3d(0px, 0px, 1px) scale(1, 1);
+    transition: all 0.5s ease;
   }
 
   & div.socials a:hover svg {

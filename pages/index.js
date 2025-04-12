@@ -6,7 +6,7 @@ export async function getStaticProps() {
         publication(host: "blog.dhera.dev") {
           isTeam
           title
-          posts(first: 10) {
+          posts(first: 5) {
             edges {
               node {
                 seo {
@@ -22,8 +22,6 @@ export async function getStaticProps() {
       }
     `;
 
-  console.log("1,2,3");
-
   const response = await fetch("https://gql.hashnode.com/", {
     method: "POST",
     headers: {
@@ -33,8 +31,6 @@ export async function getStaticProps() {
   });
 
   const { data } = await response.json();
-
-  console.log("GraphQL Response:", JSON.stringify(data, null, 2));
 
   return {
     props: {

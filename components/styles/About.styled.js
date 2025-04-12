@@ -42,6 +42,12 @@ export const StyledAbout = styled.section`
     justify-content: center;
   }
 
+  @media (max-width: 1100px) {
+    &.fullpage {
+      height: 100%;
+    }
+  }
+
   @media (max-width: 850px) {
     padding-top: 1.5rem;
 

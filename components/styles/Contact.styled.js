@@ -140,6 +140,7 @@ export const StyledContact = styled.section`
     font: inherit;
     padding: 1rem 3rem;
     margin-bottom: 2rem;
+    transition: 2s;
   }
 
   button:hover,
@@ -186,6 +187,7 @@ export const StyledContact = styled.section`
       height: 1.4rem;
       width: 1.5rem;
       transform: translate3d(0px, 0px, 1px) scale(1, 1);
+      transition: all 0.5s ease;
     }
 
     & div.socials a:hover svg {
