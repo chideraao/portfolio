@@ -35,6 +35,7 @@ function Main({ theme, setTheme, posts }) {
           setTheme={setTheme}
           pageRefs={pageRefs}
           active={active}
+          posts={posts}
         />
         <About pageRefs={pageRefs} />
         <Projects pageRefs={pageRefs} />

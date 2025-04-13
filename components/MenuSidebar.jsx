@@ -1,7 +1,7 @@
 import { Moon } from "./icons";
 import { StyledMenu } from "./styles/Header.styled";
 
-function MenuSidebar({ theme, setTheme, menuClick, setMenuClick }) {
+function MenuSidebar({ theme, setTheme, menuClick, setMenuClick, posts }) {
   const changeTheme = () => {
     document.body.classList.add("preload");
 
@@ -52,12 +52,25 @@ function MenuSidebar({ theme, setTheme, menuClick, setMenuClick }) {
                 <span>02.</span>Projects
               </a>
             </li>
-            <li onClick={() => setMenuClick(!menuClick)}>
-              <a href="#articles" aria-label="Go to articles section">
-                {" "}
-                <span>03.</span> Articles
-              </a>
-            </li>
+            {posts[0] ? (
+              <li onClick={() => setMenuClick(!menuClick)}>
+                <a href="#articles" aria-label="Go to articles section">
+                  {" "}
+                  <span>03.</span> Articles
+                </a>
+              </li>
+            ) : (
+              <li>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://blog.dhera.dev/"
+                  aria-label="Go to Dera's blog"
+                >
+                  <span>03.</span> Blog
+                </a>
+              </li>
+            )}
             <li onClick={() => setMenuClick(!menuClick)}>
               <a href="#contact" aria-label="Go to contact section">
                 {" "}

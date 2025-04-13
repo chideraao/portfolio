@@ -2,7 +2,7 @@ import Header from "./Header";
 import { Codepen, Dev, Github, LinkedIn, Twitter } from "./icons";
 import { StyledHero } from "./styles/Hero.styled";
 
-function Hero({ theme, setTheme, pageRefs, active }) {
+function Hero({ theme, setTheme, pageRefs, active, posts }) {
   const scrollToSection = () => {
     let next = pageRefs.current[1];
     next.scrollIntoView({
@@ -12,7 +12,7 @@ function Hero({ theme, setTheme, pageRefs, active }) {
 
   return (
     <div className="fullpage" ref={(el) => pageRefs.current.push(el)}>
-      <Header theme={theme} setTheme={setTheme} />
+      <Header theme={theme} setTheme={setTheme} posts={posts} />
       <div className="container" id="main">
         <StyledHero>
           <div className="hero-content">

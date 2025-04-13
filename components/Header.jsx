@@ -7,7 +7,7 @@ import { Menu, Moon } from "./icons";
 import MenuSidebar from "./MenuSidebar";
 import Scrollbar from "smooth-scrollbar";
 
-function Header({ theme, setTheme }) {
+function Header({ theme, setTheme, posts }) {
   const [menuClick, setMenuClick] = useState(false);
   const dummyRef = useRef();
   const [scrollbar, setScrollbar] = useState(dummyRef.current);
@@ -95,6 +95,7 @@ function Header({ theme, setTheme }) {
                   setTheme={setTheme}
                   menuClick={menuClick}
                   setMenuClick={setMenuClick}
+                  posts={posts}
                 />
               ) : (
                 ""
@@ -141,17 +142,32 @@ function Header({ theme, setTheme }) {
                       <span>02.</span>Projects
                     </a>
                   </li>
-                  <li>
-                    <a
-                      className="from-top"
-                      href="#articles"
-                      aria-label="Go to articles section"
-                      onClick={() => handleClick("#articles")}
-                    >
-                      {" "}
-                      <span>03.</span> Articles
-                    </a>
-                  </li>
+                  {posts[0] ? (
+                    <li>
+                      <a
+                        className="from-top"
+                        href="#articles"
+                        aria-label="Go to articles section"
+                        onClick={() => handleClick("#articles")}
+                      >
+                        {" "}
+                        <span>03.</span> Articles
+                      </a>
+                    </li>
+                  ) : (
+                    <li>
+                      <a
+                        className="from-top"
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://blog.dhera.dev/"
+                        aria-label="Go to Dera's blog"
+                      >
+                        {" "}
+                        <span>03.</span> Blog
+                      </a>
+                    </li>
+                  )}
                   <li>
                     <a
                       className="from-top"

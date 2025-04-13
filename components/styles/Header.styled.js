@@ -233,6 +233,10 @@ export const StyledMenu = styled.div`
     overflow: scroll;
   }
 
+  & li {
+    align-self: flex-start;
+  }
+
   @keyframes fadeLeft {
     from {
       opacity: 0.8;

@@ -92,13 +92,13 @@ export const StyledArticles = styled.section`
     padding: 1.1rem 1.7rem;
     margin-bottom: 2rem;
     align-self: center;
-    transition: 2s;
+    transition: 1s;
   }
 
   a.call-to-action:hover,
   a.call-to-action:focus {
     box-shadow: inset 25rem 0 0 0.1px var(--primary-alpha);
-    transition: 2s;
+    transition: 1s;
     margin-left: 0.2rem;
   }
 

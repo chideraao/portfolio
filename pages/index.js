@@ -3,40 +3,56 @@ import Main from "../components/Main";
 
 export async function getStaticProps() {
   const query = `query Publication {
-        publication(host: "blog.dhera.dev") {
-          isTeam
-          title
-          posts(first: 5) {
-            edges {
-              node {
-                seo {
-                  title
-                  description
-                }
-                title
-                url
-              }
+    publication(host: "blog.dhera.dev") {
+      isTeam
+      title
+      posts(first: 5) {
+        edges {
+          node {
+            seo {
+              title
+              description
             }
+            title
+            url
           }
         }
       }
-    `;
+    }
+  }`;
 
-  const response = await fetch("https://gql.hashnode.com/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ query }),
-  });
+  try {
+    const response = await fetch("https://gql.hashnode.com/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query }),
+    });
 
-  const { data } = await response.json();
+    if (!response.ok) {
+      console.error(`GraphQL API responded with status ${response.status}`);
+      return { props: { posts: [] } };
+    }
 
-  return {
-    props: {
-      posts: data?.publication?.posts.edges,
-    },
-  };
+    const json = await response.json();
+
+    if (json.errors) {
+      console.error("GraphQL errors:", json.errors);
+      return { props: { posts: [] } };
+    }
+
+    const posts = json?.data?.publication?.posts?.edges || [];
+
+    return {
+      props: { posts },
+    };
+  } catch (error) {
+    console.error("Error fetching:", error);
+    return {
+      props: { posts: [] },
+    };
+  }
 }
 
 export default function Home({ theme, setTheme, posts }) {
