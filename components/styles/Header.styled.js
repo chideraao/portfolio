@@ -79,6 +79,7 @@ export const StyledHeader = styled.header`
 
   & nav li a:hover {
     color: var(--primary);
+    transition: all 0.5s ease;
   }
 
   & nav li a {
@@ -86,6 +87,7 @@ export const StyledHeader = styled.header`
     display: block;
     padding: 5px 0;
     padding-bottom: 8px;
+    transition: all 0.5s ease;
   }
 
   & nav li a:after {

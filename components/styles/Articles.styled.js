@@ -66,19 +66,20 @@ export const StyledArticles = styled.section`
       width: 1.2rem;
       fill: var(--text);
       transform: translate3d(0px, 0px, 1px) scale(1, 1);
-      transition: all 0.5s ease;
+      transition: all 1s ease;
     }
 
     :hover {
       box-shadow: 0 2px 10px rgba(78, 140, 190, 0.4);
       color: var(--primary);
       transform: translate3d(0px, 0px, 1px) scale(1.03, 1.03);
+      transition: all 1s ease;
 
       & svg {
         fill: var(--primary);
 
         transform: translate3d(0px, 0px, 1px) scale(1.2, 1.2);
-        transition: all 0.5s ease;
+        transition: all 1s ease;
       }
     }
   }
@@ -92,13 +93,13 @@ export const StyledArticles = styled.section`
     padding: 1.1rem 1.7rem;
     margin-bottom: 2rem;
     align-self: center;
-    transition: 1s;
+    transition: 2s;
   }
 
   a.call-to-action:hover,
   a.call-to-action:focus {
     box-shadow: inset 25rem 0 0 0.1px var(--primary-alpha);
-    transition: 1s;
+    transition: 2s;
     margin-left: 0.2rem;
   }
 
